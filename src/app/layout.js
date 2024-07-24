@@ -1,7 +1,29 @@
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Oswald, Quicksand } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Cursor from "@/components/Cursor";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter', });
+const oswald = Oswald({ subsets: ["latin"], variable: '--font-oswald', weight: '400' });
+const quick = Quicksand({ subsets: ["latin"], variable: '--font-quick', weight: '700' });
+const poppins = Poppins({ subsets: ["latin"], variable: '--font-poppins', weight: '500' });
+const bella = localFont({
+  src: '../../public/fonts/bella.ttf',
+  display: 'swap',
+  variable: '--font-bella',
+})
+const corir = localFont({
+  src: '../../public/fonts/corir.ttf',
+  display: 'swap',
+  variable: '--font-corir',
+})
+const suiss = localFont({
+  src: '../../public/fonts/Suissnord.otf',
+  display: 'swap',
+  variable: '--font-suiss',
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +33,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${quick.variable} ${inter.variable} ${suiss.variable} ${poppins.variable} ${bella.variable} ${corir.variable} ${oswald.variable}`}>
+        <Cursor />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

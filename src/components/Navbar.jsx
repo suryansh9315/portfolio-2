@@ -1,0 +1,133 @@
+"use client";
+import { Links, Socials } from "@/utils/contact";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
+import { IoMenuOutline } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+import FlipText from "./FlipText";
+
+const variants = {
+  open: {
+    height: 600,
+    width: 300,
+    transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    height: 40,
+    width: 120,
+    transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
+  },
+};
+
+const variants2 = {
+  open: {
+    opacity: 0,
+    transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    opacity: 1,
+    transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
+  },
+};
+
+const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <div className="w-screen bg-white">
+      <div className=" px-10 py-6 flex items-center justify-between">
+        <div>
+          <Image
+            src={{ src: "/logo.jpeg", height: 63, width: 250 }}
+            alt="logo"
+            unoptimized
+            className=""
+          />
+        </div>
+        <div className="text-white flex gap-4 items-center justify-center relative">
+          <div className="font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm">
+            contact now
+          </div>
+          <motion.div
+            variants={variants2}
+            animate={isActive ? "open" : "closed"}
+            initial="closed"
+            onClick={() => setIsActive(!isActive)}
+            className={`bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 w-[120px] h-[40px] rounded-lg flex items-center justify-center text-sm cursor-pointer z-10 ${
+              isActive && "pointer-events-none"
+            } font-poppins`}
+          >
+            menu
+            <span className="ml-3">
+              <IoMenuOutline size={18} />
+            </span>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            animate={isActive ? "open" : "closed"}
+            initial="closed"
+            className="absolute w-[300px] h-[600px] rounded-lg bg-[#00249C] top-0 right-0"
+          >
+            <AnimatePresence>
+              {isActive && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  exit={{ opacity: 0, transition: { duration: 0.5 } }}
+                  className=" bg-[#00249C] rounded-2xl h-full px-10 py-14 relative font-poppins"
+                >
+                  <motion.div className="absolute right-5 top-5 cursor-pointer">
+                    <IoClose onClick={() => setIsActive(!isActive)} size={24} />
+                  </motion.div>
+                  <motion.div className="flex flex-col justify-between h-full">
+                    <div className="flex flex-col gap-3">
+                      {Links.map((link, index) => (
+                        <div
+                          key={index}
+                          className="text-white text-3xl cursor-pointer"
+                        >
+                          <Link href={link.path}>
+                            <FlipText
+                              duration={0.25}
+                              stagger={0.025}
+                              classes={"h-[40px] w-[120px]"}
+                            >
+                              {link.name}
+                            </FlipText>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      {Socials.map((social, index) => (
+                        <div
+                          key={index}
+                          className="text-white text-xl cursor-pointer"
+                        >
+                          <Link href={social.link}>
+                            <FlipText
+                              duration={0.25}
+                              stagger={0.025}
+                              classes={"h-[25px] w-[110px] "}
+                            >
+                              {social.name}
+                            </FlipText>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

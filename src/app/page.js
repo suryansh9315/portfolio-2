@@ -23,6 +23,8 @@ const Home = () => {
 
 export default Home;
 
+
+// TODO Loading/Splash Screen 
 // TODO (Home Page)
 //      - Update Navbar (Add Animations)
 //      - Update HomeHero (Add Animations)
@@ -33,6 +35,8 @@ export default Home;
 //      - Reviews Section/Optional
 //      - Make Everything Responsive
 
+
+// TODO Page Transition
 // TODO (Projects Page)
 // TODO (Services Page)
 // TODO (About Page)

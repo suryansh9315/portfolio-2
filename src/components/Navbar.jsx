@@ -1,5 +1,5 @@
 "use client";
-import { Links, Socials } from "@/utils/contact";
+import { Links, Socials } from "@/utils/data";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import FlipText from "./FlipText";
+import useStore from "@/stores/GlobalStore";
 
 const variants = {
   open: {
@@ -34,6 +35,7 @@ const variants2 = {
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const { setContactOpen } = useStore();
 
   return (
     <div className="w-screen bg-white">
@@ -47,7 +49,10 @@ const Navbar = () => {
           />
         </div>
         <div className="text-white flex gap-4 items-center justify-center relative">
-          <div className="font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm">
+          <div
+            onClick={setContactOpen}
+            className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+          >
             contact now
           </div>
           <motion.div
@@ -55,7 +60,7 @@ const Navbar = () => {
             animate={isActive ? "open" : "closed"}
             initial="closed"
             onClick={() => setIsActive(!isActive)}
-            className={`bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 w-[120px] h-[40px] rounded-lg flex items-center justify-center text-sm cursor-pointer z-10 ${
+            className={`bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 w-[120px] h-[40px] rounded-lg flex items-center justify-center text-sm cursor-pointer z-20 ${
               isActive && "pointer-events-none"
             } font-poppins`}
           >
@@ -68,7 +73,7 @@ const Navbar = () => {
             variants={variants}
             animate={isActive ? "open" : "closed"}
             initial="closed"
-            className="absolute w-[300px] h-[600px] rounded-lg bg-[#00249C] top-0 right-0"
+            className="absolute w-[300px] h-[600px] rounded-lg bg-[#00249C] top-0 right-0 z-[15]"
           >
             <AnimatePresence>
               {isActive && (

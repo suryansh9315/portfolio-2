@@ -131,7 +131,7 @@ const HomeProducts = () => {
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+            className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
           >
             learn more
             <span className="ml-3">
@@ -169,7 +169,7 @@ const HomeProducts = () => {
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+            className="z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
           >
             learn more
             <span className="ml-3">

@@ -1,5 +1,5 @@
 "use client";
-import { FAQs } from "@/utils/contact";
+import { FAQs } from "@/utils/data";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaArrowDownLong } from "react-icons/fa6";

@@ -1,4 +1,4 @@
-import { Links, Socials } from "@/utils/contact";
+import { Links, Socials } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

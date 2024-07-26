@@ -1,5 +1,5 @@
 "use client";
-import { Team } from "@/utils/contact";
+import { Team } from "@/utils/data";
 import { animate, motion, useMotionValue } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect } from "react";

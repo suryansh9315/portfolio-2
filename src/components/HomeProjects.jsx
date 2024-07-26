@@ -1,5 +1,5 @@
 "use client";
-import { Projects } from "@/utils/contact";
+import { Projects } from "@/utils/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";

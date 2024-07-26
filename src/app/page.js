@@ -6,16 +6,20 @@ import SmoothScroll from "@/components/SmoothScroll";
 import HomeHero from "@/components/HomeHero";
 import HomeTeam from "@/components/HomeTeam";
 import HomeFAQs from "@/components/HomeFAQs";
+import HomeContact from "@/components/HomeContact";
+import Loader from "@/components/Loader";
 
 const Home = () => {
   return (
     <>
+      <Loader />
       <SmoothScroll />
+      <HomeContact />
       <HomeHero />
-      <HomeProjects />
-      <HomeProducts />
-      <HomeServices />
-      <HomeTeam />
+      {/* <HomeProjects /> */}
+      {/* <HomeProducts /> */}
+      {/* <HomeServices /> */}
+      {/* <HomeTeam /> */}
       <HomeFAQs />
     </>
   );
@@ -25,17 +29,22 @@ export default Home;
 
 
 // TODO Loading/Splash Screen 
+// TODO (Add Contact Functionality)
 // TODO (Home Page)
+//      - Update Contact (Add Animations)
 //      - Update Navbar (Add Animations)
 //      - Update HomeHero (Add Animations)
 //      - Update HomeFAQs (Add Animations)
-//      - Contact Section
 //      - Update Footer Section (Add Animations, Change UI)
+//      - Make Everything Responsive
+// TODO (Update Images and Videos with real stuff)
+
+// Phase 2
+// TODO (Home Page)
 //      - Blogs Section/Optional
 //      - Reviews Section/Optional
-//      - Make Everything Responsive
 
-
+// Phase 3
 // TODO Page Transition
 // TODO (Projects Page)
 // TODO (Services Page)
@@ -44,5 +53,3 @@ export default Home;
 // TODO (Blog Page)/Optional
 // TODO (Single Project Page)/Optional
 // TODO (Single Product Page)/Optional
-// TODO (Add Contact Functionality)
-// TODO (Update Images and Videos with real stuff)

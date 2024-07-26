@@ -1,10 +1,14 @@
+"use client"
+import useStore from "@/stores/GlobalStore";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const HomeHero = () => {
+  const { setContactOpen } = useStore();
+
   return (
     <>
-      <div className="w-screen h-[50vh] flex items-end justify-center pb-10">
+      <div className="w-screen h-[50vh] flex items-end justify-center pb-10 bg-white">
         <div className="flex flex-col gap-6 justify-center items-center">
           <div className="text-5xl leading-tight tracking-tight text-center font-quick w-[70%]">
             Transforming Ideas into Powerful Software Driving Your Success
@@ -15,7 +19,7 @@ const HomeHero = () => {
             of developers, designers, and strategists collaborates seamlessly to
             turn visionary concepts into robust software solutions
           </div>
-          <div className="font-poppins px-10 py-4 text-white font-semibold bg-black rounded-lg cursor-pointer text-base flex gap-3 items-center justify-center">
+          <div onClick={setContactOpen} className="z-10 font-poppins px-10 py-4 text-white font-semibold bg-black rounded-lg cursor-pointer text-base flex gap-3 items-center justify-center">
             Book a demo
             <span>
               <FaArrowRightLong />

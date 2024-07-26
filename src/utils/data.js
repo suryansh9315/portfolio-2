@@ -66,3 +66,5 @@ export const FAQs = [
     { index: 5, question: "What is your approach to handling changes or additional requirements during a project?", answer: "We understand that requirements may evolve during the project lifecycle. We handle changes through a structured change management process that ensures transparency, assesses impacts on timelines and budgets, and keeps our clients informed every step of the way." },
     { index: 6, question: "How do you handle post-launch support and maintenance?", answer: "We offer comprehensive post-launch support and maintenance services to ensure your software continues to perform optimally. This includes bug fixes, updates, security patches, and ongoing support based on agreed-upon service level agreements (SLAs)." }
 ]
+
+export const Tags = [{ name: "Product Design", active: false }, { name: "Website", active: false }, { name: "App", active: false }, { name: "Frontend", active: false }, { name: "Backend", active: false }, { name: "Devops", active: false }, { name: "Branding", active: false }, { name: "Marketing", active: false }]

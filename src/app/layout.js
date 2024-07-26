@@ -1,9 +1,7 @@
 import { Inter, Poppins, Oswald, Quicksand } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Cursor from "@/components/Cursor";
-import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter', });
 const oswald = Oswald({ subsets: ["latin"], variable: '--font-oswald', weight: '400' });
@@ -34,10 +32,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${quick.variable} ${inter.variable} ${suiss.variable} ${poppins.variable} ${bella.variable} ${corir.variable} ${oswald.variable}`}>
-        <Cursor />
-        <Navbar />
-        {children}
-        <Footer />
+        <Loader>
+          {children}
+        </Loader>
       </body>
     </html>
   );

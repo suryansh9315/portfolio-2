@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="relative h-[340px]" style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}>
-      <div className="flex items-center justify-between px-20 py-20 bg-[#f5f5f5] fixed h-[340px] w-full bottom-0">
+      <div className="flex items-center justify-between px-20 py-20 bg-[#FFF] fixed h-[340px] w-full bottom-0 border-t border-gray-300">
         <div>
           <Image
             src={{ src: "/logo.jpeg", height: 63, width: 250 }}
@@ -38,7 +38,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-xl font-quick cursor-pointer">
-          suryansh.sharma9315@gmail.com
+          <div>suryansh.sharma9315@gmail.com</div>
+          <div>+91 9315566594</div>
         </div>
       </div>
     </div>

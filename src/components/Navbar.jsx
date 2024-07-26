@@ -40,21 +40,29 @@ const Navbar = () => {
   return (
     <div className="w-screen bg-white">
       <div className=" px-10 py-6 flex items-center justify-between">
-        <div>
+        <motion.div
+          layoutId="loader_anim_1"
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
           <Image
             src={{ src: "/logo.jpeg", height: 63, width: 250 }}
             alt="logo"
             unoptimized
             className=""
           />
-        </div>
-        <div className="text-white flex gap-4 items-center justify-center relative">
-          <div
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 1, ease: [0.76, 0, 0.24, 1.4] }}
+          className="text-white flex gap-4 items-center justify-center relative"
+        >
+          <motion.div
             onClick={setContactOpen}
             className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
           >
             contact now
-          </div>
+          </motion.div>
           <motion.div
             variants={variants2}
             animate={isActive ? "open" : "closed"}
@@ -129,7 +137,7 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -20,6 +20,63 @@ const HomeContact = () => {
     { name: "Branding", active: false },
     { name: "Marketing", active: false },
   ]);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [callbackMessage, setCallbackMessage] = useState("");
+  const [callbackStatus, setCallbackStatus] = useState("success");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSend = async () => {
+    if (!isLoading) {
+      setIsLoading(true);
+      let query = "";
+      tags.forEach((tag) => {
+        if (tag.active) {
+          query += tag.name + "-";
+        }
+      });
+      if (!name || !email || !message || !query) {
+        setCallbackMessage("Please fill all fields.");
+        setCallbackStatus("error");
+        return;
+      }
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          body: JSON.stringify({ name, email, message, query }),
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        });
+        const json = await res.json();
+        if (res.status == 200) {
+          setCallbackMessage("Request Sent");
+          setCallbackStatus("success");
+          setName("");
+          setEmail("");
+          setMessage("");
+          tags.forEach((tag) => (tag.active = false));
+          setTimeout(() => {
+            setContactOpen();
+          }, 2000);
+        } else {
+          setCallbackMessage(json.message);
+          setCallbackStatus("error");
+        }
+      } catch (error) {
+        setCallbackMessage("Something went wrong");
+        setCallbackStatus("error");
+        console.log(error);
+      } finally {
+        setTimeout(() => {
+          setCallbackMessage("");
+        }, 3000);
+        setIsLoading(false);
+      }
+    }
+  };
 
   return (
     <>
@@ -36,7 +93,11 @@ const HomeContact = () => {
         className="z-40 fixed top-0 -right-[710px] h-screen w-[700px] p-[10px]"
       >
         <div className="absolute right-6 top-6 cursor-pointer">
-          <IoClose onClick={setContactOpen} size={28} className="text-gray-500" />
+          <IoClose
+            onClick={setContactOpen}
+            size={28}
+            className="text-gray-500"
+          />
         </div>
         <div className="w-full h-full bg-white rounded-sm shadow-sm p-8 flex flex-col justify-between">
           <div className="flex flex-col gap-[15px]">
@@ -45,12 +106,16 @@ const HomeContact = () => {
               <div className="">
                 <input
                   type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Full Name"
                   className="rounded outline-none w-[300px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
                 />
               </div>
               <div className="">
                 <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Email"
                   className="rounded outline-none w-[300px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
@@ -59,6 +124,8 @@ const HomeContact = () => {
             </div>
             <div>
               <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="What's your goal, budget and timeline?"
                 className="rounded outline-none w-[615px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
               />
@@ -68,7 +135,10 @@ const HomeContact = () => {
                 <Tag tag={tag} key={index} setTags={setTags} tags={tags} />
               ))}
             </div>
-            <div className="my-4 z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[200px] h-[50px] rounded-lg flex items-center justify-center cursor-pointer text-sm">
+            <div
+              onClick={handleSend}
+              className="my-4 z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[200px] h-[50px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+            >
               Submit Request
               <span className="ml-3">
                 <FaArrowRightLong />
@@ -84,6 +154,13 @@ const HomeContact = () => {
               <div className="text-gray-300 font-poppins flex gap-3 text-sm">
                 Prefer phone? <span className="text-black">+91 9315566594</span>
               </div>
+            </div>
+            <div
+              className={`font-poppins ${
+                callbackStatus === "error" ? "text-red-500" : "text-green-500"
+              }`}
+            >
+              {callbackMessage && callbackMessage}
             </div>
           </div>
           <div className="flex flex-col gap-5">

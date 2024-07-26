@@ -7,19 +7,17 @@ import HomeHero from "@/components/HomeHero";
 import HomeTeam from "@/components/HomeTeam";
 import HomeFAQs from "@/components/HomeFAQs";
 import HomeContact from "@/components/HomeContact";
-import Loader from "@/components/Loader";
 
 const Home = () => {
   return (
     <>
-      <Loader />
       <SmoothScroll />
       <HomeContact />
       <HomeHero />
-      {/* <HomeProjects /> */}
-      {/* <HomeProducts /> */}
-      {/* <HomeServices /> */}
-      {/* <HomeTeam /> */}
+      <HomeProjects />
+      <HomeProducts />
+      <HomeServices />
+      <HomeTeam />
       <HomeFAQs />
     </>
   );
@@ -27,9 +25,6 @@ const Home = () => {
 
 export default Home;
 
-
-// TODO Loading/Splash Screen 
-// TODO (Add Contact Functionality)
 // TODO (Home Page)
 //      - Update Contact (Add Animations)
 //      - Update Navbar (Add Animations)
@@ -37,6 +32,7 @@ export default Home;
 //      - Update HomeFAQs (Add Animations)
 //      - Update Footer Section (Add Animations, Change UI)
 //      - Make Everything Responsive
+// TODO  Update Loading/Splash Screen 
 // TODO (Update Images and Videos with real stuff)
 
 // Phase 2

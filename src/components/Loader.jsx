@@ -1,6 +1,6 @@
 "use client";
 import useStore from "@/stores/GlobalStore";
-import React, { useState } from "react";
+import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Cursor from "./Cursor";
@@ -8,8 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 const Loader = ({ children }) => {
-  const { loading, setLoadingTrue, setLoadingFalse } = useStore();
-  const [showAnother, setShowAnother] = useState(false);
+  const { loading, setLoadingFalse } = useStore();
 
   return (
     <div>
@@ -26,12 +25,25 @@ const Loader = ({ children }) => {
                 layoutId="loader_anim_1"
               >
                 <Image
-                  src={{ src: "/logo.jpeg", height: 63, width: 250 }}
+                  src={{ src: "/logo_black.png", height: 63, width: 250 }}
                   alt="logo"
                   unoptimized
                   className=""
                 />
               </motion.div>
+              <motion.video
+                layoutId="loader_anim_2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                src="/deqube.mp4"
+                height="250"
+                width="300"
+                className="object-cover rounded-lg h-[250px] w-[300px] absolute top-[65px] -right-[252px]"
+                autoPlay
+                loop
+                muted
+              ></motion.video>
             </div>
           </motion.div>
         ) : (

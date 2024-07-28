@@ -25,16 +25,6 @@ const Home = () => {
 
 export default Home;
 
-// TODO (Home Page)
-//      - Update Contact (Add Animations)
-//      - Update Navbar (Add Animations)
-//      - Update HomeHero (Add Animations)
-//      - Update HomeFAQs (Add Animations)
-//      - Update Footer Section (Add Animations, Change UI)
-//      - Make Everything Responsive
-// TODO  Update Loading/Splash Screen 
-// TODO (Update Images and Videos with real stuff)
-
 // Phase 2
 // TODO (Home Page)
 //      - Blogs Section/Optional

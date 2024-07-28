@@ -35,7 +35,7 @@ const HomeServices = () => {
   }, [activeIndex]);
 
   return (
-    <div className="px-10">
+    <div className="px-10" id="services">
       <div>
         <motion.div className="font-suiss text-2xl">03</motion.div>
         <motion.div
@@ -43,13 +43,13 @@ const HomeServices = () => {
           whileInView={variants.screen}
           transition={variants.transition}
           viewport={{ once: true }}
-          className="text-5xl leading-tight tracking-tight font-quick"
+          className="text-3xl xs:text-4xl lg:text-5xl  leading-tight tracking-tight font-quick"
         >
           What we offer
         </motion.div>
       </div>
-      <div className="flex my-14 items-center h-full">
-        <div className="w-1/2 h-full overflow-hidden">
+      <div className="flex my-6 sm:my-14 items-center h-full flex-col lg:flex-row gap-10 sm:gap-20 lg:gap-0">
+        <div className="w-full lg:w-1/2 h-full overflow-hidden">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
@@ -80,7 +80,7 @@ const HomeServices = () => {
             ))}
           </motion.div>
         </div>
-        <div className="w-1/2 h-full flex flex-col justify-center gap-6 pl-28">
+        <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center lg:items-start gap-6 lg:pl-28">
           {Services.map((service, index) => (
             <motion.div
               initial={variants.initial}
@@ -90,7 +90,7 @@ const HomeServices = () => {
                 ease: "easeIn",
                 delay: 0.2 + (0.02*index),
               }}
-              className={`text-4xl font-poppins cursor-pointer ${
+              className={`text-3xl sm:text-5xl lg:text-4xl font-poppins cursor-pointer ${
                 activeIndex - 1 == index ? "text-[#FBC200]" : ""
               }`}
               key={index}

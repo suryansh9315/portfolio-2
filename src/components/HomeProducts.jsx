@@ -40,77 +40,79 @@ const HomeProducts = () => {
 
   return (
     <div
-      className="px-10 my-20 mb-10 min-h-screen pt-10 bg-[#fff5e3] flex flex-col"
+      className="px-10 my-20 py-10 bg-[#fff5e3] flex flex-col lg:gap-10"
       ref={textRef}
+      id="products"
     >
-      <div>
+      <div className="max-w-7xl">
         <motion.div className="font-suiss text-2xl">02</motion.div>
         <motion.div
           initial={variants.initial}
           whileInView={variants.screen}
           transition={variants.transition}
           viewport={{ once: true }}
-          className="text-5xl leading-tight tracking-tight font-quick"
+          className="text-3xl xs:text-4xl lg:text-5xl leading-tight tracking-tight font-quick"
         >
           Our Products
         </motion.div>
       </div>
-      <div className="w-full flex my-28">
-        <div className="w-1/2 flex items-center justify-center h-full relative">
+      <div className="w-full flex my-20 flex-col lg:flex-row gap-20 xl:gap-0 items-center justify-center">
+        <div className="w-full xl:w-1/2 2xl:w-[900px] flex items-center justify-center h-full">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center relative"
           >
             <Image
               src={"/images/project_1.webp"}
-              className="w-[80%] rounded-md shadow-sm"
+              className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover"
               width={100}
               height={100}
               unoptimized
               alt="Image"
             />
-          </motion.div>
-          <motion.div
-            initial={variants.initial}
-            whileInView={variants.screen}
-            transition={variants.transition}
-            className="absolute -left-5 -top-10 shadow-md"
-          >
-            <Image
-              src={"/images/project_2.webp"}
-              className=""
-              width={200}
-              height={200}
-              unoptimized
-              alt="Image"
-            />
-          </motion.div>
-          <motion.div
-            initial={variants.initial}
-            whileInView={variants.screen}
-            transition={variants.transition}
-            className="shadow-md absolute -right-10 -bottom-10 "
-          >
-            <Image
-              src={"/images/project_3.webp"}
-              className=""
-              width={300}
-              height={250}
-              unoptimized
-              alt="Image"
-            />
+
+            <motion.div
+              initial={variants.initial}
+              whileInView={variants.screen}
+              transition={variants.transition}
+              className="absolute -left-[20px] -top-[40px] shadow-md"
+            >
+              <Image
+                src={"/images/project_2.webp"}
+                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
+                width={200}
+                height={200}
+                unoptimized
+                alt="Image"
+              />
+            </motion.div>
+            <motion.div
+              initial={variants.initial}
+              whileInView={variants.screen}
+              transition={variants.transition}
+              className="shadow-md absolute -right-[20px] -bottom-[40px] "
+            >
+              <Image
+                src={"/images/project_3.webp"}
+                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
+                width={300}
+                height={250}
+                unoptimized
+                alt="Image"
+              />
+            </motion.div>
           </motion.div>
         </div>
-        <div className="w-1/2 flex flex-col items-center gap-10">
+        <div className="w-full xl:w-1/2 2xl:w-[900px] flex flex-col items-center gap-5 md:gap-10">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-6xl font-corir"
+            className="text-5xl md:text-6xl font-corir"
           >
             Review Reward
           </motion.div>
@@ -119,7 +121,7 @@ const HomeProducts = () => {
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-xl text-gray-400 font-poppins w-[60%] text-center"
+            className="text-xl text-gray-400 font-poppins w-[90%] text-center"
           >
             Discover the Ultimate Review Reward Hub: Your go-to destination for
             insightful product reviews and rewarding experiences! At our
@@ -140,14 +142,14 @@ const HomeProducts = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-full flex my-28">
-        <div className="w-[40%] flex flex-col items-center gap-10">
+      <div className="w-full flex my-20 flex-col lg:flex-row gap-20 xl:gap-0 items-center justify-center">
+        <div className="w-full xl:w-1/2 2xl:w-[900px] flex flex-col items-center gap-5 md:gap-10">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-6xl font-corir"
+            className="text-5xl md:text-6xl font-corir"
           >
             Autoflow
           </motion.div>
@@ -156,7 +158,7 @@ const HomeProducts = () => {
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-xl text-gray-400 font-poppins w-[70%] text-center"
+            className="text-xl text-gray-400 font-poppins w-[90%] text-center"
           >
             Revolutionize Your Automotive Business with Cutting-Edge Auto SaaS
             Solutions. Our platform offers comprehensive software as a service
@@ -177,52 +179,53 @@ const HomeProducts = () => {
             </span>
           </motion.div>
         </div>
-        <div className="w-[60%] flex items-center justify-center h-full relative">
+        <div className="w-full xl:w-1/2 2xl:w-[900px] flex items-center justify-center h-full">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center relative"
           >
             <Image
               src={"/images/project_4.webp"}
-              className="w-[80%] rounded-md shadow-sm"
+              className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover"
               width={100}
               height={100}
               unoptimized
               alt="Image"
             />
-          </motion.div>
-          <motion.div
-            initial={variants.initial}
-            whileInView={variants.screen}
-            transition={variants.transition}
-            className="absolute -right-5 -top-20 shadow-md"
-          >
-            <Image
-              src={"/images/project_4.webp"}
-              className=""
-              width={200}
-              height={200}
-              unoptimized
-              alt="Image"
-            />
-          </motion.div>
-          <motion.div
-            initial={variants.initial}
-            whileInView={variants.screen}
-            transition={variants.transition}
-            className="shadow-md absolute -left-10 -bottom-10 "
-          >
-            <Image
-              src={"/images/project_6.webp"}
-              className=""
-              width={300}
-              height={250}
-              unoptimized
-              alt="Image"
-            />
+
+            <motion.div
+              initial={variants.initial}
+              whileInView={variants.screen}
+              transition={variants.transition}
+              className="absolute -right-[20px] -top-[80px] shadow-md"
+            >
+              <Image
+                src={"/images/project_4.webp"}
+                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
+                width={200}
+                height={200}
+                unoptimized
+                alt="Image"
+              />
+            </motion.div>
+            <motion.div
+              initial={variants.initial}
+              whileInView={variants.screen}
+              transition={variants.transition}
+              className="shadow-md absolute -left-[40px] -bottom-[40px] "
+            >
+              <Image
+                src={"/images/project_6.webp"}
+                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
+                width={300}
+                height={250}
+                unoptimized
+                alt="Image"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

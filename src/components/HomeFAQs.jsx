@@ -30,7 +30,7 @@ const HomeFAQs = () => {
           whileInView={variants.screen}
           transition={variants.transition}
           viewport={{ once: true }}
-          className="text-5xl leading-tight tracking-tight font-quick"
+          className="text-3xl xs:text-4xl lg:text-5xl leading-tight tracking-tight font-quick"
         >
           Frequently asked questions
         </motion.div>
@@ -49,14 +49,22 @@ const FAQ = ({ faq, index }) => {
 
   return (
     <motion.div
-      className={`w-full flex justify-between pb-8 pt-12 gap-20 border-t border-gray-200 transition-all ${
+      className={`w-full flex justify-between pb-8 pt-12 gap-5 xs:gap-10 md:gap-20 border-t border-gray-200 transition-all ${
         index == 6 ? "" : ""
       }`}
+      initial={variants.initial}
+      whileInView={variants.screen}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.3,
+        ease: "easeIn",
+        delay: 0.1 + 0.02 * index,
+      }}
     >
-      <div className="flex gap-20 ">
+      <div className="flex gap-5 xs:gap-10 md:gap-20">
         <div className="text-2xl font-oswald text-gray-300">0{index + 1}</div>
         <div className="gap-5 flex flex-col">
-          <div className="text-2xl font-sans font-normal">{faq.question}</div>
+          <div className="text-lg xs:text-xl sm:text-2xl font-sans font-normal">{faq.question}</div>
           <AnimatePresence>
             {answer && (
               <motion.div

@@ -38,17 +38,17 @@ const Navbar = () => {
   const { setContactOpen } = useStore();
 
   return (
-    <div className="w-screen bg-white">
+    <div className="w-screen bg-white" id="home">
       <div className=" px-10 py-6 flex items-center justify-between">
         <motion.div
           layoutId="loader_anim_1"
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <Image
-            src={{ src: "/logo.jpeg", height: 63, width: 250 }}
+            src={{ src: "/logo_black.png", height: 63, width: 250 }}
             alt="logo"
             unoptimized
-            className=""
+            className="w-[150px] h-[38px] sm:w-[200px] sm:h-[50px] md:w-[250px] md:h-[63px] "
           />
         </motion.div>
         <motion.div
@@ -59,7 +59,7 @@ const Navbar = () => {
         >
           <motion.div
             onClick={setContactOpen}
-            className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+            className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg hidden sm:flex items-center justify-center cursor-pointer text-sm"
           >
             contact now
           </motion.div>
@@ -102,7 +102,22 @@ const Navbar = () => {
                           key={index}
                           className="text-white text-3xl cursor-pointer"
                         >
-                          <Link href={link.path}>
+                          <Link
+                            href={link.id}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              if (link.name === "contact") {
+                                setContactOpen();
+                                return;
+                              }
+                              setIsActive(!isActive);
+                              setTimeout(() => {
+                                document
+                                  .getElementById(link.id.substring(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              }, 1000);
+                            }}
+                          >
                             <FlipText
                               duration={0.25}
                               stagger={0.025}
@@ -120,7 +135,7 @@ const Navbar = () => {
                           key={index}
                           className="text-white text-xl cursor-pointer"
                         >
-                          <Link href={social.link}>
+                          <a href={social.link} target="_blank">
                             <FlipText
                               duration={0.25}
                               stagger={0.025}
@@ -128,7 +143,7 @@ const Navbar = () => {
                             >
                               {social.name}
                             </FlipText>
-                          </Link>
+                          </a>
                         </div>
                       ))}
                     </div>

@@ -22,7 +22,7 @@ const variants = {
 
 const HomeProjects = () => {
   return (
-    <div className="px-10 min-h-screen pt-20">
+    <div className="px-[20px] xs:px-[40px] min-h-screen pt-20" id="projects">
       <div>
         <motion.div
           className="font-suiss text-2xl"
@@ -34,18 +34,18 @@ const HomeProjects = () => {
           whileInView={variants.screen}
           transition={variants.transition}
           viewport={{ once: true }}
-          className="text-5xl leading-tight tracking-tight font-quick"
+          className="text-3xl xs:text-4xl lg:text-5xl leading-tight tracking-tight font-quick"
         >
           Featured Projects
         </motion.div>
       </div>
-      <div className="flex flex-wrap py-10 items-center justify-center gap-2">
+      <div className="flex flex-wrap py-5 lg:py-10 items-center justify-center gap-2">
         {Projects.map((project, index) => (
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
-            className="w-[49%] px-10 py-10 bg-[#f0f0f0] rounded-lg shadow-sm border border-gray-200"
+            className="w-full md:w-[49%] px-2 md:px-5 lg:px-10 py-2 md:py-5 lg:py-10 bg-[#f0f0f0] rounded-lg shadow-sm border border-gray-200"
             key={index}
           >
             <motion.div

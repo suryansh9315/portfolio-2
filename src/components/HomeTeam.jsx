@@ -38,7 +38,7 @@ const HomeTeam = () => {
   }, [xTranslate, width]);
 
   return (
-    <div className="my-20">
+    <div className="my-20" id="team">
       <div className="px-10">
         <motion.div className="font-suiss text-2xl">04</motion.div>
         <motion.div
@@ -46,14 +46,18 @@ const HomeTeam = () => {
           whileInView={variants.screen}
           transition={variants.transition}
           viewport={{ once: true }}
-          className="text-5xl leading-tight tracking-tight font-quick"
+          className="text-3xl xs:text-4xl lg:text-5xl  leading-tight tracking-tight font-quick"
         >
           Meet our team
         </motion.div>
       </div>
       <motion.div
         style={{ x: xTranslate }}
-        className="flex gap-[10px] flex-nowrap my-10"
+        initial={variants.initial}
+        whileInView={variants.screen}
+        transition={variants.transition}
+        viewport={{ once: true }}
+        className="flex gap-[10px] flex-nowrap my-5 md:my-10"
         ref={ref}
       >
         {[...Team, ...Team].map((member, index) => (

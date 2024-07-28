@@ -87,10 +87,10 @@ const HomeContact = () => {
         className="z-30 fixed top-0 h-screen w-screen bg-black pointer-events-none"
       ></motion.div>
       <motion.div
-        initial={{ right: "-710px" }}
-        animate={{ right: contactOpen ? "0px" : "-710px" }}
+        initial={{ right: "-810px" }}
+        animate={{ right: contactOpen ? "0px" : "-810px" }}
         transition={{ duration: 0.6, ease: "anticipate" }}
-        className="z-40 fixed top-0 -right-[710px] h-screen w-[700px] p-[10px]"
+        className="z-40 fixed top-0 -right-[810px] h-screen w-screen md:w-[700px] p-[10px]"
       >
         <div className="absolute right-6 top-6 cursor-pointer">
           <IoClose
@@ -109,7 +109,7 @@ const HomeContact = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Full Name"
-                  className="rounded outline-none w-[300px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
+                  className="rounded outline-none w-full sm:w-[250px] md:w-[300px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
                 />
               </div>
               <div className="">
@@ -118,7 +118,7 @@ const HomeContact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Email"
-                  className="rounded outline-none w-[300px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
+                  className="rounded outline-none w-full sm:w-[250px] md:w-[300px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
                 />
               </div>
             </div>
@@ -127,7 +127,7 @@ const HomeContact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="What's your goal, budget and timeline?"
-                className="rounded outline-none w-[615px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
+                className="rounded outline-none w-full sm:w-[515px] md:w-[615px] px-6 py-3 border border-gray-300 placeholder:font-poppins font-poppins"
               />
             </div>
             <div className="flex flex-wrap gap-2">

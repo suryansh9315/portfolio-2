@@ -26,7 +26,7 @@ const HomeTeam = () => {
   const xTranslate = useMotionValue(0);
 
   useEffect(() => {
-    let finalPosition = -4600;
+    let finalPosition = -2800;
     let controls = animate(xTranslate, [0, finalPosition], {
       ease: "linear",
       duration: 50,

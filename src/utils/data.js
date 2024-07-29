@@ -59,11 +59,7 @@ export const Team = [
     { name: "Shivam Agarwal", role: "UI Developer", linkedin: "", github: "", image: "/images/team_2.webp" },
     { name: "Varun", role: "Motion Designer", linkedin: "", github: "", image: "/images/team_3.webp" },
     { name: "Tanish Vashisth", role: "Devops Lead", linkedin: "", github: "", image: "/images/team_4.png" },
-    { name: "Samarth Shukla", role: "Product Designer", linkedin: "", github: "", image: "/images/team_5.webp" },
     { name: "Mhatav Sugan", role: "Webflow Developer", linkedin: "", github: "", image: "/images/team_6.webp" },
-    { name: "Abhishek Pandat", role: "Event Manager", linkedin: "", github: "", image: "/images/team_7.webp" },
-    { name: "Khushi Fernandez", role: "Cloud Architect", linkedin: "", github: "", image: "/images/team_8.jpg" },
-    { name: "Aviral Sharma", role: "Founder", linkedin: "", github: "", image: "/images/team_9.jpg" },
     { name: "Daksh Dhankar", role: "Project Manager", linkedin: "", github: "", image: "/images/team_10.jpg" },
 ]
 

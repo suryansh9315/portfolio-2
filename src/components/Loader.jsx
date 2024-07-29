@@ -34,19 +34,21 @@ const Loader = ({ children }) => {
                   className=""
                 />
               </motion.div>
-              <motion.video
-                layoutId="loader_anim_2"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                src="/deqube.mp4"
-                height="250"
-                width="300"
-                className="object-cover rounded-lg h-[250px] w-[300px] absolute top-[65px] -right-[252px]"
-                autoPlay
-                loop
-                muted
-              ></motion.video>
+              {width > 800 && (
+                <motion.video
+                  layoutId="loader_anim_2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  src="/deqube.mp4"
+                  height="250"
+                  width="300"
+                  className="object-cover rounded-lg h-[250px] w-[300px] absolute top-[65px] -right-[252px]"
+                  autoPlay
+                  loop
+                  muted
+                ></motion.video>
+              )}
             </div>
           </motion.div>
         ) : (

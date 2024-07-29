@@ -7,6 +7,7 @@ import Cursor from "./Cursor";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import useWindowSize from "@/hooks/useWindowSize";
+import SmoothScroll, { Lenis } from "./SmoothScroll";
 
 const Loader = ({ children }) => {
   const { loading, setLoadingFalse } = useStore();
@@ -50,10 +51,12 @@ const Loader = ({ children }) => {
           </motion.div>
         ) : (
           <>
-            {width > 1200 && <Cursor />}
-            <Navbar />
-            {children}
-            <Footer />
+            <SmoothScroll>
+              {width > 1200 && <Cursor />}
+              <Navbar />
+              {children}
+              <Footer />
+            </SmoothScroll>
           </>
         )}
       </AnimatePresence>

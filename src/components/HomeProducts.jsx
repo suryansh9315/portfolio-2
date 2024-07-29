@@ -112,7 +112,7 @@ const HomeProducts = () => {
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-corir"
+            className="text-4xl md:text-6xl font-corir"
           >
             Review Reward
           </motion.div>
@@ -149,7 +149,7 @@ const HomeProducts = () => {
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-corir"
+            className="text-4xl md:text-6xl font-corir"
           >
             Autoflow
           </motion.div>

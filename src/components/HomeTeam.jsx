@@ -38,7 +38,7 @@ const HomeTeam = () => {
   }, [xTranslate, width]);
 
   return (
-    <div className="my-20" id="team">
+    <div className="my-20 w-screen overflow-hidden" id="team">
       <div className="px-10">
         <motion.div className="font-suiss text-2xl">04</motion.div>
         <motion.div

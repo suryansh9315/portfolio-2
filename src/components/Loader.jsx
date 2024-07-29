@@ -6,9 +6,11 @@ import Navbar from "./Navbar";
 import Cursor from "./Cursor";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const Loader = ({ children }) => {
   const { loading, setLoadingFalse } = useStore();
+  const { width } = useWindowSize();
 
   return (
     <div>
@@ -48,7 +50,7 @@ const Loader = ({ children }) => {
           </motion.div>
         ) : (
           <>
-            <Cursor />
+            {width > 1200 && <Cursor />}
             <Navbar />
             {children}
             <Footer />

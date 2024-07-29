@@ -1,5 +1,4 @@
 "use client";
-import useWindowSize from "@/hooks/useWindowSize";
 // import { useGlobalContext } from "@/providers/GlobalProviders";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -8,7 +7,6 @@ import React, { useEffect, useRef } from "react";
 const Cursor = () => {
   //   const { hoverHome } = useGlobalContext();
   //   const size = hoverHome ? 200 : 30;
-  const { width } = useWindowSize()
   const size = 30;
   const lerp = (x, y, a) => x * (1 - a) + y * a;
   const circle = useRef();
@@ -49,10 +47,6 @@ const Cursor = () => {
       window.removeEventListener("mousemove", updateMouse);
     };
   }, []);
-
-  if(width < 1200){
-    return null
-  }
 
   return (
     <motion.div

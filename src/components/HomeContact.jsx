@@ -1,6 +1,6 @@
 "use client";
 import useStore from "@/stores/GlobalStore";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Tag from "./Tag";
@@ -80,12 +80,17 @@ const HomeContact = () => {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: contactOpen ? 0.5 : 0 }}
-        transition={{ duration: 0.4, ease: "linear" }}
-        className="z-30 fixed top-0 h-screen w-screen bg-black pointer-events-none"
-      ></motion.div>
+      <AnimatePresence>
+        {contactOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4, ease: "linear" }}
+            className="z-30 fixed top-0 h-screen w-screen bg-black pointer-events-none "
+          ></motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         initial={{ right: "-810px" }}
         animate={{ right: contactOpen ? "0px" : "-810px" }}

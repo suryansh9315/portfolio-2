@@ -10,6 +10,6 @@
 
 body{
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
   /* scroll-behavior: smooth; */
 }

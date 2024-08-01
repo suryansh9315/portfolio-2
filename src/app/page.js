@@ -29,7 +29,7 @@ export default Home;
 // TODO (Home Page)
 //      - Blogs Section/Optional
 // TODO (Blog Page)/Optional
-// TODO Page Transition
+// TODO Page Transitions
 
 // Phase 3
 // TODO (Projects Page)

@@ -23,6 +23,7 @@ module.exports = {
         corir: ['var(--font-corir)'],
         oswald: ['var(--font-oswald)'],
         quick: ['var(--font-quick)'],
+        quickLight: ['var(--font-quickLight)']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

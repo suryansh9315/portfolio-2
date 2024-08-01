@@ -6,6 +6,7 @@ import Loader from "@/components/Loader";
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter', });
 const oswald = Oswald({ subsets: ["latin"], variable: '--font-oswald', weight: '400' });
 const quick = Quicksand({ subsets: ["latin"], variable: '--font-quick', weight: '700' });
+const quickLight = Quicksand({ subsets: ["latin"], variable: '--font-quickLight', weight: '400' });
 const poppins = Poppins({ subsets: ["latin"], variable: '--font-poppins', weight: '500' });
 const bella = localFont({
   src: '../../public/fonts/bella.ttf',
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
-      <body className={`${quick.variable} ${inter.variable} ${suiss.variable} ${poppins.variable} ${bella.variable} ${corir.variable} ${oswald.variable}`}>
+      <body className={`${quickLight.variable} ${quick.variable} ${inter.variable} ${suiss.variable} ${poppins.variable} ${bella.variable} ${corir.variable} ${oswald.variable}`}>
         <Loader>
           {children}
         </Loader>

@@ -40,7 +40,7 @@ const HomeProducts = () => {
 
   return (
     <div
-      className="px-10 my-20 py-10 bg-[#fff5e3] flex flex-col lg:gap-10"
+      className="px-10 my-20 py-10 bg-[#f2f2f2] flex flex-col lg:gap-10"
       ref={textRef}
       id="products"
     >

@@ -4,9 +4,9 @@ import HomeProjects from "@/components/HomeProjects";
 import HomeServices from "@/components/HomeServices";
 import SmoothScroll from "@/components/SmoothScroll";
 import HomeHero from "@/components/HomeHero";
-import HomeTeam from "@/components/HomeTeam";
 import HomeFAQs from "@/components/HomeFAQs";
 import HomeContact from "@/components/HomeContact";
+import HomeReviews from "@/components/HomeReviews";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <HomeProjects />
       <HomeProducts />
       <HomeServices />
-      <HomeTeam />
+      <HomeReviews />
       <HomeFAQs />
     </>
   );
@@ -28,14 +28,13 @@ export default Home;
 // Phase 2
 // TODO (Home Page)
 //      - Blogs Section/Optional
-//      - Reviews Section/Optional
+// TODO (Blog Page)/Optional
+// TODO Page Transition
 
 // Phase 3
-// TODO Page Transition
 // TODO (Projects Page)
 // TODO (Services Page)
 // TODO (About Page)
 // TODO (Contact Page)
-// TODO (Blog Page)/Optional
 // TODO (Single Project Page)/Optional
 // TODO (Single Product Page)/Optional

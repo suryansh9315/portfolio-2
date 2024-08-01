@@ -20,9 +20,9 @@ export const Links = [
         id: "#services"
     },
     {
-        name: "team",
+        name: "reviews",
         path: "/",
-        id: "#team"
+        id: "#reviews"
     },
     {
         name: "contact",
@@ -73,4 +73,29 @@ export const FAQs = [
     { index: 6, question: "How do you handle post-launch support and maintenance?", answer: "We offer comprehensive post-launch support and maintenance services to ensure your software continues to perform optimally. This includes bug fixes, updates, security patches, and ongoing support based on agreed-upon service level agreements (SLAs)." }
 ]
 
-export const Tags = [{ name: "Product Design", active: false }, { name: "Website", active: false }, { name: "App", active: false }, { name: "Frontend", active: false }, { name: "Backend", active: false }, { name: "Devops", active: false }, { name: "Branding", active: false }, { name: "Marketing", active: false }]
+export const Reviews = [
+    {
+        name: "Aviral Sharma",
+        image: "/images/team_1.webp",
+        company: "Aviral Enterprises",
+        review: "Absolute pleasure to work with Alex! His design work was transformative for us, our entire branding was modernized including our website, collateral materials, multiple logos, and the UI/UX for our mobile and desktop applications. He took his time to learn what we were looking for and delivered exactly what we envisioned almost immediately, requiring very little iteration.",
+    },
+    {
+        name: "Shivam Agarwal",
+        image: "/images/team_2.webp",
+        company: "Rashtriya TV",
+        review: "We wholeheartedly endorse Alex for his exceptional work. He went above and beyond, exceeding our expectations at every turn. His expertise and guidance helped us maintain a consistent brand image. Our unique logo has received countless compliments and reflect our values perfectly. Don't hesitate to choose him – you won't be disappointed."
+    },
+    {
+        name: "Samarth Shukla",
+        image: "/images/team_3.webp",
+        company: "Pump.fun",
+        review: "Working with Alex has been an absolute pleasure - he has been responsive, focused and eloquent in the work performed on our project!"
+    },
+    {
+        name: "Anahita Fernandez",
+        image: "/images/team_4.png",
+        company: "Loreal",
+        review: "It is with great pleasure that we express our gratitude for the excellent work done by Beyond on the website for our project. Impressive responsiveness, creativity and dedication have contributed to an excellent result. It has been a pleasure working with you and we look forward to a continued partnership. We wholeheartedly recommend them."
+    },
+]

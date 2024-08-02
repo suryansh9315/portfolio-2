@@ -13,3 +13,6 @@ body{
   overflow-x: hidden;
   /* scroll-behavior: smooth; */
 }
+.notion-collection-row{
+  display: none;
+}

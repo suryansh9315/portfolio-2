@@ -1,5 +1,8 @@
 import { Inter, Poppins, Oswald, Quicksand } from "next/font/google";
 import localFont from "next/font/local";
+import 'katex/dist/katex.min.css'
+import 'prismjs/themes/prism-tomorrow.css'
+import 'react-notion-x/src/styles.css'
 import "./globals.css";
 import Loader from "@/components/Loader";
 

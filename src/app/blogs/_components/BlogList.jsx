@@ -59,7 +59,7 @@ const BlogList = () => {
           </motion.div>
         ))}
       </div>
-      <div className="w-screen mb-20 flex justify-center bg-white">
+      {/* <div className="w-screen mb-20 flex justify-center bg-white">
         <motion.div
           initial={variants.initial}
           whileInView={variants.screen}
@@ -69,7 +69,7 @@ const BlogList = () => {
         >
           Show More
         </motion.div>
-      </div>
+      </div> */}
     </>
   );
 };

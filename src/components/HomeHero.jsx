@@ -58,7 +58,7 @@ const HomeHero = () => {
           <motion.video
             layoutId="loader_anim_2"
             transition={{ duration: 1, ease: "easeInOut" }}
-            src="/deqube.mp4"
+            src="/deqube_2.mp4"
             height="100%"
             width="95%"
             className="object-cover rounded-lg h-full w-[95%]"

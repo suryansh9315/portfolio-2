@@ -8,11 +8,12 @@ import { IoMenuOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import FlipText from "./FlipText";
 import useStore from "@/stores/GlobalStore";
+import { useRouter } from "next/navigation";
 
 const variants = {
   open: {
-    height: 600,
-    width: 300,
+    height: 650,
+    width: 350,
     transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
@@ -36,6 +37,7 @@ const variants2 = {
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const { setContactOpen } = useStore();
+  const router = useRouter()
 
   return (
     <div className="w-screen bg-white" id="home">
@@ -52,8 +54,8 @@ const Navbar = () => {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 1, ease: [0.76, 0, 0.24, 1.4] }}
           className="text-white flex gap-4 items-center justify-center relative"
         >
@@ -81,7 +83,7 @@ const Navbar = () => {
             variants={variants}
             animate={isActive ? "open" : "closed"}
             initial="closed"
-            className="absolute w-[300px] h-[600px] rounded-lg bg-[#00249C] top-0 right-0 z-[15]"
+            className="absolute w-[350px] h-[650px] rounded-lg bg-[#00249C] top-0 right-0 z-[15]"
           >
             <AnimatePresence>
               {isActive && (
@@ -106,8 +108,18 @@ const Navbar = () => {
                             href={link.id}
                             onClick={(e) => {
                               e.preventDefault();
+                              if (link.name === "home") {
+                                setIsActive(!isActive);
+                                router.push(link.path);
+                                return;
+                              }
                               if (link.name === "contact") {
                                 setContactOpen();
+                                return;
+                              }
+                              if (link.name === "blogs") {
+                                setIsActive(!isActive);
+                                router.push(link.path);
                                 return;
                               }
                               setIsActive(!isActive);
@@ -129,7 +141,7 @@ const Navbar = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex gap-2 flex-wrap">
                       {Socials.map((social, index) => (
                         <div
                           key={index}

@@ -7,6 +7,7 @@ import HomeHero from "@/components/HomeHero";
 import HomeFAQs from "@/components/HomeFAQs";
 import HomeContact from "@/components/HomeContact";
 import HomeReviews from "@/components/HomeReviews";
+import HomeBlogs from "@/components/HomeBlogs";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <HomeServices />
       <HomeReviews />
       <HomeFAQs />
+      <HomeBlogs />
     </>
   );
 };

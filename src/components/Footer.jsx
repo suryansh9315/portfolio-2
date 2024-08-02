@@ -11,12 +11,12 @@ const Footer = () => {
 
   return (
     <div
-      className="relative h-[650px] sm:h-[600px]"
+      className="relative h-[800px] sm:h-[650px]"
       style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
     >
-      <div className="px-10 py-10 bg-[#f2f2f2] fixed h-[650px] sm:h-[600px] w-full bottom-0 border-t border-gray-300">
+      <div className="px-10 py-10 bg-[#0B0B1C] text-white fixed h-[800px] sm:h-[650px] w-full bottom-0 border-t border-gray-300">
         <div className="flex h-full justify-between flex-col pt-5">
-          <div className="flex w-full justify-between px-0 lg:px-20">
+          <div className="flex w-full justify-between px-0 lg:px-20 mb-10">
             <div className="flex gap-10 md:gap-20 flex-col sm:flex-row">
               <motion.div className="flex flex-col gap-2">
                 <div className="text-xl sm:text-2xl font-poppins opacity-50">
@@ -85,7 +85,7 @@ const Footer = () => {
               <div className="font-quick text-lg sm:text-2xl xs:flex hidden">@ Deqube 2024</div>
               <div>
                 <Image
-                  src={{ src: "/logo_black.png", height: 114, width: 470 }}
+                  src={{ src: "/logo.png", height: 114, width: 470 }}
                   alt="logo"
                   unoptimized
                   className="h-[65px] w-[270px] md:h-[90px] md:w-[370px] lg:h-[114px] lg:w-[470px] object-cover"

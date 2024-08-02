@@ -22,7 +22,7 @@ const variants = {
 
 const HomeFAQs = () => {
   return (
-    <div className="px-10 mt-20">
+    <div className="px-10 my-20">
       <div>
         <motion.div className="font-suiss text-2xl">05</motion.div>
         <motion.div
@@ -50,7 +50,7 @@ const FAQ = ({ faq, index }) => {
   return (
     <motion.div
       className={`w-full flex justify-between pb-8 pt-12 gap-5 xs:gap-10 md:gap-20 border-t border-gray-200 transition-all ${
-        index == 6 ? "" : ""
+        index == 6 ? "border-b border-gray-200" : ""
       }`}
       initial={variants.initial}
       whileInView={variants.screen}

@@ -25,6 +25,11 @@ export const Links = [
         id: "#reviews"
     },
     {
+        name: "blogs",
+        path: "/blogs",
+        id: "#blogs"
+    },
+    {
         name: "contact",
         path: "/",
         id: "#contact"
@@ -34,6 +39,9 @@ export const Links = [
 export const Socials = [
     { name: "Linkedin", link: "/" },
     { name: "Instagram", link: "/" },
+    { name: "Youtube", link: "/" },
+    { name: "Twitter", link: "/" },
+    { name: "Github", link: "/" },
 ]
 
 export const Projects = [
@@ -50,8 +58,8 @@ export const Services = [
     { name: "Development", image: "/images/service_2.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus, numquam est alias accusantium aperiam mollitia, laborum quas sit" },
     { name: "Deployment", image: "/images/service_3.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus, numquam est alias accusantium aperiam mollitia" },
     { name: "Brand Strategy", image: "/images/service_4.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus" },
-    { name: "Serverless Solutions", image: "/images/service_5.webp", description: "We have covered top-notch musical events and are renowned as leading media partners specializing in art form-based productions. Our expertise and creativity make us a trusted name in the industry." },
-    { name: "Cloud Integration", image: "/images/project_5.webp", description: "We achieved remarkable success as media partners for a prestigious corporate event, where we expertly covered a meet and greet featuring India's top startups." },
+    { name: "Content Developer", image: "/images/service_5.webp", description: "We have covered top-notch musical events and are renowned as leading media partners specializing in art form-based productions. Our expertise and creativity make us a trusted name in the industry." },
+    { name: "Marketing", image: "/images/project_5.webp", description: "We achieved remarkable success as media partners for a prestigious corporate event, where we expertly covered a meet and greet featuring India's top startups." },
 ]
 
 export const Team = [
@@ -97,5 +105,45 @@ export const Reviews = [
         image: "/images/team_4.png",
         company: "Loreal",
         review: "It is with great pleasure that we express our gratitude for the excellent work done by Beyond on the website for our project. Impressive responsiveness, creativity and dedication have contributed to an excellent result. It has been a pleasure working with you and we look forward to a continued partnership. We wholeheartedly recommend them."
+    },
+]
+
+export const Blogs = [
+    {
+        date: "Apr 9, 2024",
+        author: "Suryansh",
+        title: "Welcome Mike Painter",
+        image: "/images/blog_1.jpg",
+    },
+    {
+        date: "Dec 3, 2023",
+        author: "Tanish",
+        title: "Stylish Newspaper Cover Illustration by New York Design Band",
+        image: "/images/blog_2.jpg",
+    },
+    {
+        date: "Feb 19, 2024",
+        author: "Varun",
+        title: "Minimalistic Design Concept for Balmain Online Store",
+        image: "/images/blog_1.jpg",
+    },
+    {
+        date: "May 29, 2024",
+        author: "Shivam",
+        title: "Revitalizing Grenier brand identity and editorial design",
+        image: "/images/blog_4.jpg",
+    },
+    {
+        date: "Jan 9, 2024",
+        author: "Suryansh",
+        title: "Start your company now",
+        image: "/images/blog_5.jpg",
+        description: "Acquiring a new customer can cost five times more than retaining an existing one. Additionally, increasing customer retention just by 5% can increase profits from 25-95%. In other words, understanding the nuances of customer retention is paramount. You can’t get away with just attracting new customers. Your strategic goal is to keep them engaged and loyal. In this article, we will go through the techniques we employ to measure and improve retention for our clients. Let’s dive right in."
+    },
+    {
+        date: "July 25, 2024",
+        author: "Tanish",
+        title: "The Ignite Podcast",
+        image: "/images/blog_6.jpg",
     },
 ]

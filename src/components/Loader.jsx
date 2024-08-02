@@ -8,10 +8,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import useWindowSize from "@/hooks/useWindowSize";
 import SmoothScroll, { Lenis } from "./SmoothScroll";
+import { usePathname } from "next/navigation";
 
 const Loader = ({ children }) => {
   const { loading, setLoadingFalse } = useStore();
   const { width } = useWindowSize();
+  const pathname = usePathname()
 
   return (
     <div>
@@ -34,7 +36,7 @@ const Loader = ({ children }) => {
                   className=""
                 />
               </motion.div>
-              {width > 800 && (
+              {width > 800 && pathname === "/" && (
                 <motion.video
                   layoutId="loader_anim_2"
                   initial={{ opacity: 0 }}

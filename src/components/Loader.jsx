@@ -9,6 +9,8 @@ import Image from "next/image";
 import useWindowSize from "@/hooks/useWindowSize";
 import SmoothScroll, { Lenis } from "./SmoothScroll";
 import { usePathname } from "next/navigation";
+import HomeContact from "./HomeContact";
+import ResetLenisScroll from "./ResetLenisScroll";
 
 const Loader = ({ children }) => {
   const { loading, setLoadingFalse } = useStore();
@@ -56,8 +58,10 @@ const Loader = ({ children }) => {
         ) : (
           <>
             <SmoothScroll>
+              <ResetLenisScroll />
               {width > 1200 && <Cursor />}
               <Navbar />
+              <HomeContact />
               {children}
               <Footer />
             </SmoothScroll>

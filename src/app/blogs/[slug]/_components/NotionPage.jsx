@@ -64,21 +64,23 @@ const NotionPage = ({ recordMap, rootPageId }) => {
   }
 
   return (
-    <NotionRenderer
-      className=""
-      bodyClassName=""
-      recordMap={recordMap}
-      darkMode={false}
-      rootPageId={rootPageId}
-      components={{
-        nextImage: Image,
-        nextLink: Link,
-        Code,
-        Collection,
-        Equation,
-        Modal,
-      }}
-    />
+    <div className="mr-0 md:mr-20">
+      <NotionRenderer
+        className="p-0 m-0"
+        bodyClassName="p-0 m-0"
+        recordMap={recordMap}
+        darkMode={false}
+        rootPageId={rootPageId}
+        components={{
+          nextImage: Image,
+          nextLink: Link,
+          Code,
+          Collection,
+          Equation,
+          Modal,
+        }}
+      />
+    </div>
   );
 };
 

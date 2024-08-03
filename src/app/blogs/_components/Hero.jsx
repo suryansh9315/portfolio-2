@@ -2,7 +2,8 @@
 import { Blogs } from "@/utils/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useMemo } from "react";
 
 const variants = {
   initial: {
@@ -20,7 +21,18 @@ const variants = {
   },
 };
 
-const Hero = () => {
+const Hero = ({ blog }) => {
+  const router = useRouter();
+  const heroBlogDesc = useMemo(() => {
+    const heroBlogDescArray = blog.properties.Description.rich_text;
+    let temp = "";
+    for (let i = 0; i < heroBlogDescArray.length; i++) {
+      temp += heroBlogDescArray[i].plain_text;
+    }
+    temp = temp.substring(0, 400) + " ...";
+    return temp;
+  }, [blog]);
+
   return (
     <>
       <div className="w-screen mt-[60px] flex pb-10 justify-center bg-white">
@@ -55,10 +67,19 @@ const Hero = () => {
           transition={variants.transition}
           viewport={{ once: true }}
           className="group flex cursor-pointer flex-col sm:flex-row gap-3"
+          onClick={() =>
+            router.push(
+              "/blogs/" + blog.properties.Slug.rich_text[0].plain_text
+            )
+          }
         >
           <div className="w-full lg:w-1/2 object-cover h-[250px] xs:h-[300px] sm:h-[500px] rounded-md overflow-hidden">
             <Image
-              src={{ src: Blogs[1].image, height: 200, width: 200 }}
+              src={{
+                src: blog.properties.BannerImage.url,
+                height: 200,
+                width: 200,
+              }}
               alt="logo"
               unoptimized
               className="w-full object-cover h-[250px] xs:h-[300px] sm:h-[500px] rounded-md group-hover:scale-110 transition-all duration-300"
@@ -68,27 +89,29 @@ const Hero = () => {
             <div className="flex flex-col gap-3">
               <div className="flex gap-5 items-center justify-between sm:justify-start">
                 <div className="bg-[#f2f2f2] px-5 py-2 rounded-md font-poppins">
-                  {Blogs[4].date}
+                  {blog.created_time}
                 </div>
                 <div className="font-quickLight text-base">
                   Written By{" "}
-                  <span className="font-quick">{Blogs[4].author}</span>
+                  <span className="font-quick">
+                    {blog.properties.Author.rich_text[0].plain_text}
+                  </span>
                 </div>
               </div>
               <div className="text-xl xs:text-2xl md:text-4xl font-quickLight group-hover:text-[#00249C] transition-all duration-200">
-                {Blogs[4].title}
+                {blog.properties.Title.title[0].plain_text}
               </div>
               <div className="hidden xs:flex font-sans text-base sm:text-lg font-light">
-                {Blogs[4].description}
+                {heroBlogDesc}
               </div>
             </div>
             <div className="hidden xs:flex gap-3 flex-wrap">
-              {["Tech", "Javascript", "React"].map((tag, i) => (
+              {blog.properties.Tags.multi_select.map((tag, i) => (
                 <div
                   className="px-3 py-2 rounded-md border border-gray-300 font-quick"
                   key={i}
                 >
-                  {tag}
+                  {tag.name}
                 </div>
               ))}
             </div>

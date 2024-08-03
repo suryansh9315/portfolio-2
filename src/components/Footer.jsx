@@ -3,11 +3,13 @@ import useStore from "@/stores/GlobalStore";
 import { Links, Socials } from "@/utils/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const Footer = () => {
   const { setContactOpen } = useStore();
+  const path = usePathname()
+  const router = useRouter()
 
   return (
     <div
@@ -27,21 +29,28 @@ const Footer = () => {
                     key={index}
                     className="text-xl sm:text-2xl cursor-pointer font-poppins"
                   >
-                    <Link
-                      href={link.id}
+                    <div
                       onClick={(e) => {
                         e.preventDefault();
                         if (link.name === "contact") {
                           setContactOpen();
                           return;
                         }
-                        document
-                          .getElementById(link.id.substring(1))
-                          .scrollIntoView({ behavior: "smooth" });
+                        if (path === "/") {
+                          setTimeout(() => {
+                            document
+                              .getElementById(link.id.substring(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          }, 100);
+                          return;
+                        }
+                        setTimeout(() => {
+                          router.push("/")
+                        }, 100);
                       }}
                     >
                       {link.name}
-                    </Link>
+                    </div>
                   </motion.div>
                 ))}
               </motion.div>

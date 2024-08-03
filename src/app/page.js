@@ -5,22 +5,23 @@ import HomeServices from "@/components/HomeServices";
 import SmoothScroll from "@/components/SmoothScroll";
 import HomeHero from "@/components/HomeHero";
 import HomeFAQs from "@/components/HomeFAQs";
-import HomeContact from "@/components/HomeContact";
 import HomeReviews from "@/components/HomeReviews";
 import HomeBlogs from "@/components/HomeBlogs";
+import { getPages } from "@/utils/notion";
 
-const Home = () => {
+const Home = async () => {
+  const pages = await getPages()
+
   return (
     <>
       <SmoothScroll />
-      <HomeContact />
       <HomeHero />
       <HomeProjects />
       <HomeProducts />
       <HomeServices />
       <HomeReviews />
       <HomeFAQs />
-      <HomeBlogs />
+      <HomeBlogs blogs={pages.results} />
     </>
   );
 };

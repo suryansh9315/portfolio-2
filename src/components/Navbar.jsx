@@ -2,13 +2,12 @@
 import { Links, Socials } from "@/utils/data";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import FlipText from "./FlipText";
 import useStore from "@/stores/GlobalStore";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const variants = {
   open: {
@@ -37,7 +36,8 @@ const variants2 = {
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const { setContactOpen } = useStore();
-  const router = useRouter()
+  const router = useRouter();
+  const path = usePathname();
 
   return (
     <div className="w-screen bg-white" id="home">
@@ -104,29 +104,25 @@ const Navbar = () => {
                           key={index}
                           className="text-white text-3xl cursor-pointer"
                         >
-                          <Link
-                            href={link.id}
+                          <div
                             onClick={(e) => {
                               e.preventDefault();
-                              if (link.name === "home") {
-                                setIsActive(!isActive);
-                                router.push(link.path);
-                                return;
-                              }
                               if (link.name === "contact") {
                                 setContactOpen();
                                 return;
                               }
-                              if (link.name === "blogs") {
+                              if (path === "/") {
                                 setIsActive(!isActive);
-                                router.push(link.path);
+                                setTimeout(() => {
+                                  document
+                                    .getElementById(link.id.substring(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                }, 1000);
                                 return;
                               }
                               setIsActive(!isActive);
                               setTimeout(() => {
-                                document
-                                  .getElementById(link.id.substring(1))
-                                  .scrollIntoView({ behavior: "smooth" });
+                                router.push("/")
                               }, 1000);
                             }}
                           >
@@ -137,7 +133,7 @@ const Navbar = () => {
                             >
                               {link.name}
                             </FlipText>
-                          </Link>
+                          </div>
                         </div>
                       ))}
                     </div>

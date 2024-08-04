@@ -44,7 +44,7 @@ const Loader = ({ children }) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  src="/deqube.mp4"
+                  src="/deqube_2.mp4"
                   height="250"
                   width="300"
                   className="object-cover rounded-lg h-[250px] w-[300px] absolute top-[65px] -right-[252px]"

@@ -152,12 +152,14 @@ const HomeContact = () => {
             <div className="flex flex-col gap-1">
               <div className="text-gray-300 font-poppins flex gap-3 text-sm">
                 Prefer email?{" "}
-                <span className="text-black">
-                  suryansh.sharma9315@gmail.com
-                </span>
+                <span className="text-black">info@deqube.co.in</span>
               </div>
               <div className="text-gray-300 font-poppins flex gap-3 text-sm">
-                Prefer phone? <span className="text-black">+91 9315566594</span>
+                Prefer phone?{" "}
+                <span className="text-black">
+                  +91 8447223934
+                  <br /> +91 9625262980
+                </span>
               </div>
             </div>
             <div

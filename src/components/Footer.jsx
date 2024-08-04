@@ -8,8 +8,8 @@ import React from "react";
 
 const Footer = () => {
   const { setContactOpen } = useStore();
-  const path = usePathname()
-  const router = useRouter()
+  const path = usePathname();
+  const router = useRouter();
 
   return (
     <div
@@ -45,7 +45,7 @@ const Footer = () => {
                           return;
                         }
                         setTimeout(() => {
-                          router.push("/")
+                          router.push("/");
                         }, 100);
                       }}
                     >
@@ -75,23 +75,22 @@ const Footer = () => {
                 Company
               </div>
               <div className="text-xl sm:text-2xl cursor-pointer font-poppins">
-                Dilshad Garden
-              </div>
-              <div className="text-xl sm:text-2xl cursor-pointer font-poppins">
-                Delhi, 201004
-              </div>
-              <div className="text-xl sm:text-2xl cursor-pointer font-poppins">
-                +91 9315566594
-              </div>
-              <div className="text-xl sm:text-2xl cursor-pointer font-poppins">
                 info@deqube.co.in
+              </div>
+              <div className="text-xl sm:text-2xl cursor-pointer font-poppins">
+                +91 8447223934
+              </div>
+              <div className="text-xl sm:text-2xl cursor-pointer font-poppins">
+                +91 9625262980
               </div>
             </div>
           </div>
           <div>
             <div className="w-full bg-gray-300 h-[1px] mb-10" />
             <div className="flex items-end justify-center w-full xs:justify-between">
-              <div className="font-quick text-lg sm:text-2xl xs:flex hidden">@ Deqube 2024</div>
+              <div className="font-quick text-lg sm:text-2xl xs:flex hidden">
+                @ Deqube 2024
+              </div>
               <div>
                 <Image
                   src={{ src: "/logo.png", height: 114, width: 470 }}

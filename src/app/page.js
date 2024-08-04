@@ -29,10 +29,11 @@ const Home = async () => {
 export default Home;
 
 // Phase 2
-// TODO (Home Page)
-//      - Blogs Section/Optional
-// TODO (Blog Page)/Optional
-// TODO Page Transitions
+// Change Contact Email to deqube email
+// Update Content
+// Add Related Blogs Section on Single Blog Page
+// Make Tags Functional
+// Bug on First Load
 
 // Phase 3
 // TODO (Projects Page)

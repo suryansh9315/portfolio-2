@@ -1,5 +1,5 @@
 "use client";
-import { Blogs } from "@/utils/data";
+import { Blogs, DateOptions } from "@/utils/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -89,7 +89,7 @@ const Hero = ({ blog }) => {
             <div className="flex flex-col gap-3">
               <div className="flex gap-5 items-center justify-between sm:justify-start">
                 <div className="bg-[#f2f2f2] px-5 py-2 rounded-md font-poppins">
-                  {blog.created_time}
+                  {new Date(blog.created_time).toLocaleDateString('en-US', DateOptions)}
                 </div>
                 <div className="font-quickLight text-base">
                   Written By{" "}

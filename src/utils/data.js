@@ -147,3 +147,9 @@ export const Blogs = [
         image: "/images/blog_6.jpg",
     },
 ]
+
+export const DateOptions = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+};

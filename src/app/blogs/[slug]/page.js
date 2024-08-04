@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import React from "react";
 import NotionPage from "./_components/NotionPage";
 import BlogHeader from "./_components/BlogHeader";
+import { DateOptions } from "@/utils/data";
 
 const Blog = async ({ params }) => {
   const slug = params.slug;
@@ -11,7 +12,6 @@ const Blog = async ({ params }) => {
   if (!post) notFound();
 
   const recordMap = await getPage(post.id);
-  console.log(post);
 
   return (
     <div className="min-h-screen w-screen max-w-[1600px] px-10 pb-20 pt-10 mx-auto">
@@ -19,7 +19,7 @@ const Blog = async ({ params }) => {
         title={post.properties.Title.title[0].plain_text}
         descriptionArray={post.properties.Description.rich_text}
         author={post.properties.Author.rich_text[0].plain_text}
-        date={post.created_time}
+        date={new Date(post.created_time).toLocaleDateString('en-US', DateOptions)}
         tags={post.properties.Tags.multi_select}
         bannerImage={post.properties.BannerImage.url}
         bannerImageWidth={post.properties.BannerImageWidth.number}

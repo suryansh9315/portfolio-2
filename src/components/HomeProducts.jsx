@@ -66,7 +66,7 @@ const HomeProducts = () => {
             className="flex items-center justify-center relative"
           >
             <Image
-              src={"/images/project_1.webp"}
+              src={"/images/review3.png"}
               className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover"
               width={100}
               height={100}
@@ -81,7 +81,7 @@ const HomeProducts = () => {
               className="absolute -left-[20px] -top-[40px] shadow-md"
             >
               <Image
-                src={"/images/project_2.webp"}
+                src={"/images/review2.png"}
                 className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
                 width={200}
                 height={200}
@@ -96,7 +96,7 @@ const HomeProducts = () => {
               className="shadow-md absolute -right-[20px] -bottom-[40px] "
             >
               <Image
-                src={"/images/project_3.webp"}
+                src={"/images/review.png"}
                 className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
                 width={300}
                 height={250}
@@ -123,10 +123,10 @@ const HomeProducts = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-400 font-poppins w-[90%] text-center"
           >
-            Discover the Ultimate Review Reward Hub: Your go-to destination for
-            insightful product reviews and rewarding experiences! At our
-            innovative platform, users explore a diverse range of reviews
-            spanning electronics, fashion, home goods, and more.
+            ReviewReward is a platform designed to ensure the authenticity of
+            online reviews using advanced AI and machine learning techniques. It
+            aims to combat fake reviews by providing users with trustworthy
+            feedback on products and services.
           </motion.div>
           <motion.div
             initial={variants.initial}
@@ -135,7 +135,7 @@ const HomeProducts = () => {
             viewport={{ once: true }}
             className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
           >
-            learn more
+            coming soon
             <span className="ml-3">
               <FaArrowRightLong color="#000" />
             </span>
@@ -173,7 +173,7 @@ const HomeProducts = () => {
             viewport={{ once: true }}
             className="z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
           >
-            learn more
+            coming soon
             <span className="ml-3">
               <FaArrowRightLong />
             </span>
@@ -188,8 +188,8 @@ const HomeProducts = () => {
             className="flex items-center justify-center relative"
           >
             <Image
-              src={"/images/project_4.webp"}
-              className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover"
+              src={"/images/auto.png"}
+              className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover object-left"
               width={100}
               height={100}
               unoptimized
@@ -203,8 +203,8 @@ const HomeProducts = () => {
               className="absolute -right-[20px] -top-[80px] shadow-md"
             >
               <Image
-                src={"/images/project_4.webp"}
-                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
+                src={"/images/auto2.png"}
+                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover object-left"
                 width={200}
                 height={200}
                 unoptimized
@@ -218,8 +218,8 @@ const HomeProducts = () => {
               className="shadow-md absolute -left-[40px] -bottom-[40px] "
             >
               <Image
-                src={"/images/project_6.webp"}
-                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover"
+                src={"/images/auto3.png"}
+                className="w-[200px] h-[150px] xl:h-[250px] xl:w-[300px] object-cover object-left"
                 width={300}
                 height={250}
                 unoptimized

@@ -45,20 +45,20 @@ export const Socials = [
 ]
 
 export const Projects = [
-    { name: "Pt. Abhay Sopori", image: "/images/project_1.webp", link: "/", color: '#07DAC0' },
-    { name: "Padmashri Pt. Ulhas Kashalkar", image: "/images/project_2.webp", link: "/", color: '#CE2380' },
-    { name: "Ustad Rafiuddin Sabri", image: "/images/project_3.webp", link: "/", color: '#171810' },
-    { name: "Sh. Purbayan Chatterjee", image: "/images/project_4.webp", link: "/", color: '#07DAC0' },
-    { name: "Ka chalo (Podcast)", image: "/images/project_5.webp", link: "/", color: '#CE2380' },
-    { name: "Pt. Satish Vyas", image: "/images/project_6.webp", link: "/", color: '#171810' },
+    { name: "Ustad Rafiuddin Sabri", image: "/images/2.png", link: "/", color: '#171810' },
+    { name: "Ka chalo (Podcast)", image: "/images/3.png", link: "/", color: '#CE2380' },
+    { name: "Sh. Purbayan Chatterjee", image: "/images/1.png", link: "/", color: '#07DAC0' },
+    { name: "Padmashri Pt. Ulhas Kashalkar", image: "/images/5.png", link: "/", color: '#CE2380' },
+    { name: "Pt. Satish Vyas", image: "/images/6.png", link: "/", color: '#171810' },
+    { name: "Pt. Abhay Sopori", image: "/images/4.png", link: "/", color: '#07DAC0' },
 ]
 
 export const Services = [
     { name: "UI/UX Design", image: "/images/service_1.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus" },
-    { name: "Development", image: "/images/service_2.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus, numquam est alias accusantium aperiam mollitia, laborum quas sit" },
-    { name: "Deployment", image: "/images/service_3.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus, numquam est alias accusantium aperiam mollitia" },
-    { name: "Brand Strategy", image: "/images/service_4.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus" },
-    { name: "Content Developer", image: "/images/service_5.webp", description: "We have covered top-notch musical events and are renowned as leading media partners specializing in art form-based productions. Our expertise and creativity make us a trusted name in the industry." },
+    { name: "Website Development", image: "/images/service_2.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus, numquam est alias accusantium aperiam mollitia, laborum quas sit" },
+    { name: "App Development", image: "/images/service_3.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus, numquam est alias accusantium aperiam mollitia" },
+    { name: "Deployment", image: "/images/service_4.webp", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci eveniet quam velit, nemo ipsum dolor quo qui animi accusamus" },
+    { name: "SEO", image: "/images/service_5.webp", description: "We have covered top-notch musical events and are renowned as leading media partners specializing in art form-based productions. Our expertise and creativity make us a trusted name in the industry." },
     { name: "Marketing", image: "/images/project_5.webp", description: "We achieved remarkable success as media partners for a prestigious corporate event, where we expertly covered a meet and greet featuring India's top startups." },
 ]
 

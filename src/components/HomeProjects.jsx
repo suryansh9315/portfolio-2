@@ -55,7 +55,7 @@ const HomeProjects = () => {
             >
               <Image
                 src={project.image}
-                className="w-full h-full rounded-lg shadow-md"
+                className="w-full h-full rounded-lg shadow-md object-cover"
                 width={100}
                 height={100}
                 unoptimized

@@ -4,6 +4,7 @@ import React from "react";
 import NotionPage from "./_components/NotionPage";
 import BlogHeader from "./_components/BlogHeader";
 import { DateOptions } from "@/utils/data";
+import BlogSide from "./_components/BlogSide";
 
 const Blog = async ({ params }) => {
   const slug = params.slug;
@@ -27,20 +28,7 @@ const Blog = async ({ params }) => {
       />
       <div className="w-full flex flex-col-reverse md:flex-row">
         <div className="w-1/4 mt-[30px]">
-          <div className="gap-2 flex flex-col">
-            <div className="font-poppins text-2xl">Tags</div>
-            <div className="h-[2px] w-[80%] bg-gray-200"></div>
-            <div className="my-3 flex gap-3 flex-wrap">
-              {post.properties.Tags.multi_select.map((tag, i) => (
-                <span
-                  className="px-3 py-2 rounded-md border border-gray-300 font-quickLight"
-                  key={i}
-                >
-                  {tag.name}
-                </span>
-              ))}
-            </div>
-          </div>
+          <BlogSide post={post} />
         </div>
         <div className="w-full md:w-3/4">
           <NotionPage recordMap={recordMap} rootPageId={post.id} />

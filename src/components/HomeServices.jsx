@@ -90,7 +90,7 @@ const HomeServices = () => {
                 ease: "easeIn",
                 delay: 0.2 + (0.02*index),
               }}
-              className={`text-3xl sm:text-5xl lg:text-4xl font-poppins cursor-pointer ${
+              className={`text-2xl xs:text-3xl sm:text-5xl lg:text-4xl font-poppins cursor-pointer ${
                 activeIndex - 1 == index ? "text-[#FBC200]" : ""
               }`}
               key={index}

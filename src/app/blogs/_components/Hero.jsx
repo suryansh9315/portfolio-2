@@ -41,9 +41,9 @@ const Hero = ({ blog }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 1, ease: [0.76, 0, 0.24, 1] }}
-            className="text-5xl leading-tight tracking-tight text-center font-quick w-[70%]"
+            className="text-5xl leading-tight tracking-tight text-center font-quick w-[80%]"
           >
-            Welcome to our Blogs
+            Discover Our Latest Posts
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -55,8 +55,10 @@ const Hero = ({ blog }) => {
             }}
             className="text-center w-1/2 font-poppins text-gray-400"
           >
-            Browse our articles and newsworthy content to gain insights into our
-            work and industry expertise.
+            Welcome to our blog, where we dive deep into the world of software
+            development. From the latest industry trends and best practices to
+            expert tips and innovative solutions, our posts are designed to keep
+            you informed and inspired.
           </motion.div>
         </div>
       </div>
@@ -89,7 +91,10 @@ const Hero = ({ blog }) => {
             <div className="flex flex-col gap-3">
               <div className="flex gap-5 items-center justify-between sm:justify-start">
                 <div className="bg-[#f2f2f2] px-5 py-2 rounded-md font-poppins">
-                  {new Date(blog.created_time).toLocaleDateString('en-US', DateOptions)}
+                  {new Date(blog.created_time).toLocaleDateString(
+                    "en-US",
+                    DateOptions
+                  )}
                 </div>
                 <div className="font-quickLight text-base">
                   Written By{" "}

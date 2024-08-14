@@ -180,7 +180,7 @@ const HomeContact = () => {
             >
               <div>
                 <Image
-                  src={"/images/team_1.webp"}
+                  src={"/images/review4.avif"}
                   className="rounded-md h-[50px] w-[50px] object-cover"
                   width={100}
                   height={100}

@@ -46,39 +46,39 @@ export const Socials = [
 
 export const Projects = [
   {
-    name: "Ustad Rafiuddin Sabri",
+    name: "Fleet OPS",
     image: "/images/2.png",
-    link: "/",
+    link: "https://play.google.com/store/apps/details?id=com.onev.fleetops&pli=1",
     color: "#171810",
   },
   {
-    name: "Ka chalo (Podcast)",
+    name: "Night Flinch Media",
     image: "/images/3.png",
     link: "/",
     color: "#CE2380",
   },
   {
-    name: "Sh. Purbayan Chatterjee",
+    name: "All Swap",
     image: "/images/1.png",
-    link: "/",
+    link: "https://all-swap-flax.vercel.app",
     color: "#07DAC0",
   },
   {
-    name: "Padmashri Pt. Ulhas Kashalkar",
+    name: "3D Viewer",
     image: "/images/5.png",
-    link: "/",
+    link: "https://3d-viewer-three.vercel.app",
     color: "#CE2380",
   },
   {
-    name: "Pt. Satish Vyas",
+    name: "SS Store",
     image: "/images/6.png",
-    link: "/",
+    link: "https://ecom-sanity-stripe.vercel.app",
     color: "#171810",
   },
   {
-    name: "Pt. Abhay Sopori",
+    name: "CrowdFunding",
     image: "/images/4.png",
-    link: "/",
+    link: "https://crowd-funding-seven.vercel.app",
     color: "#07DAC0",
   },
 ];

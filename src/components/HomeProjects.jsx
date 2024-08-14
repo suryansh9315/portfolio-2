@@ -24,11 +24,7 @@ const HomeProjects = () => {
   return (
     <div className="px-[20px] xs:px-[40px] min-h-screen pt-20" id="projects">
       <div>
-        <motion.div
-          className="font-suiss text-2xl"
-        >
-          01
-        </motion.div>
+        <motion.div className="font-suiss text-2xl">01</motion.div>
         <motion.div
           initial={variants.initial}
           whileInView={variants.screen}
@@ -48,20 +44,39 @@ const HomeProjects = () => {
             className="w-full md:w-[49%] px-2 md:px-5 lg:px-10 py-2 md:py-5 lg:py-10 bg-[#f0f0f0] rounded-lg shadow-sm border border-gray-200"
             key={index}
           >
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 1.5 }}
-              transition={{ duration: 0.25 }}
-              className=""
-            >
-              <Image
-                src={project.image}
-                className="w-full h-full rounded-lg shadow-md object-cover"
-                width={100}
-                height={100}
-                unoptimized
-                alt="Image"
-              />
-            </motion.div>
+            {project.name == "Night Flinch Media" ? (
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 1.5 }}
+                transition={{ duration: 0.25 }}
+                className=""
+              >
+                <Image
+                  src={project.image}
+                  className="w-full h-full rounded-lg shadow-md object-cover"
+                  width={100}
+                  height={100}
+                  unoptimized
+                  alt="Image"
+                />
+              </motion.div>
+            ) : (
+              <a href={project.link} target="_blank">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 1.5 }}
+                  transition={{ duration: 0.25 }}
+                  className=""
+                >
+                  <Image
+                    src={project.image}
+                    className="w-full h-full rounded-lg shadow-md object-cover"
+                    width={100}
+                    height={100}
+                    unoptimized
+                    alt="Image"
+                  />
+                </motion.div>
+              </a>
+            )}
           </motion.div>
         ))}
       </div>

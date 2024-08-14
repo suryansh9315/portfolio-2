@@ -128,18 +128,20 @@ const HomeProducts = () => {
             aims to combat fake reviews by providing users with trustworthy
             feedback on products and services.
           </motion.div>
-          <motion.div
-            initial={variants.initial}
-            whileInView={variants.screen}
-            transition={variants.transition}
-            viewport={{ once: true }}
-            className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
-          >
-            coming soon
-            <span className="ml-3">
-              <FaArrowRightLong color="#000" />
-            </span>
-          </motion.div>
+          <a href="https://reviewreward.vercel.app" target="_blank">
+            <motion.div
+              initial={variants.initial}
+              whileInView={variants.screen}
+              transition={variants.transition}
+              viewport={{ once: true }}
+              className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+            >
+              Demo
+              <span className="ml-3">
+                <FaArrowRightLong color="#000" />
+              </span>
+            </motion.div>
+          </a>
         </div>
       </div>
       <div className="w-full flex my-20 flex-col lg:flex-row gap-20 xl:gap-0 items-center justify-center">
@@ -166,18 +168,20 @@ const HomeProducts = () => {
             inventory, streamline sales processes, and enhance customer
             relationships with our intuitive tools.
           </motion.div>
-          <motion.div
-            initial={variants.initial}
-            whileInView={variants.screen}
-            transition={variants.transition}
-            viewport={{ once: true }}
-            className="z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
-          >
-            coming soon
-            <span className="ml-3">
-              <FaArrowRightLong />
-            </span>
-          </motion.div>
+          <a href="https://autosaas.vercel.app" target="_blank">
+            <motion.div
+              initial={variants.initial}
+              whileInView={variants.screen}
+              transition={variants.transition}
+              viewport={{ once: true }}
+              className="z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
+            >
+              Demo
+              <span className="ml-3">
+                <FaArrowRightLong />
+              </span>
+            </motion.div>
+          </a>
         </div>
         <div className="w-full xl:w-1/2 2xl:w-[900px] flex items-center justify-center h-full">
           <motion.div

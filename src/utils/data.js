@@ -215,7 +215,7 @@ export const FAQs = [
 
 export const Reviews = [
   {
-    name: "Aviral Sharma",
+    name: "Sandeep Kumar",
     image: "/images/review1.avif",
     company: "Aviral Enterprises",
     review:

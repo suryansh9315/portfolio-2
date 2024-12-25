@@ -32,7 +32,7 @@ const Loader = ({ children }) => {
                 layoutId="loader_anim_1"
               >
                 <Image
-                  src={{ src: "/logo_black.png", height: 63, width: 250 }}
+                  src={{ src: "/images/logo.png", height: 63, width: 250 }}
                   alt="logo"
                   unoptimized
                   className=""

@@ -40,12 +40,12 @@ const HomeProducts = () => {
 
   return (
     <div
-      className="px-10 my-20 py-10 bg-[#f2f2f2] flex flex-col lg:gap-10"
+      className="px-10 my-20 py-10 bg-[#f2f2f2] flex flex-col lg:gap-5"
       ref={textRef}
       id="products"
     >
       <div className="max-w-7xl">
-        <motion.div className="font-suiss text-2xl">02</motion.div>
+        <motion.div className="font-suiss text-2xl">01</motion.div>
         <motion.div
           initial={variants.initial}
           whileInView={variants.screen}
@@ -53,10 +53,10 @@ const HomeProducts = () => {
           viewport={{ once: true }}
           className="text-3xl xs:text-4xl lg:text-5xl leading-tight tracking-tight font-quick"
         >
-          Our Products
+          Past Experience
         </motion.div>
       </div>
-      <div className="w-full flex my-20 flex-col lg:flex-row gap-20 xl:gap-0 items-center justify-center">
+      <div className="w-full flex my-10 flex-col lg:flex-row gap-20 xl:gap-0 items-center justify-center">
         <div className="w-full xl:w-1/2 2xl:w-[900px] flex items-center justify-center h-full">
           <motion.div
             initial={variants.initial}
@@ -66,15 +66,14 @@ const HomeProducts = () => {
             className="flex items-center justify-center relative"
           >
             <Image
-              src={"/images/review3.png"}
-              className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover"
+              src={"/images/FH.png"}
+              className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover object-left"
               width={100}
               height={100}
               unoptimized
               alt="Image"
             />
-
-            <motion.div
+            {/* <motion.div
               initial={variants.initial}
               whileInView={variants.screen}
               transition={variants.transition}
@@ -103,18 +102,27 @@ const HomeProducts = () => {
                 unoptimized
                 alt="Image"
               />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
-        <div className="w-full xl:w-1/2 2xl:w-[900px] flex flex-col items-center gap-5 md:gap-10">
+        <div className="w-full xl:w-1/2 2xl:w-[900px] flex flex-col px-3 items-center gap-3">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-corir"
+            className="text-3xl md:text-4xl font-poppins text-center"
           >
-            Review Reward
+            FixHealth
+          </motion.div>
+          <motion.div
+            initial={variants.initial}
+            whileInView={variants.screen}
+            transition={variants.transition}
+            viewport={{ once: true }}
+            className="text-xl text-gray-500 font-poppins text-center"
+          >
+            Frontend Developer (2024 - Present)
           </motion.div>
           <motion.div
             initial={variants.initial}
@@ -123,37 +131,33 @@ const HomeProducts = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-400 font-poppins w-[90%] text-center"
           >
-            ReviewReward is a platform designed to ensure the authenticity of
-            online reviews using advanced AI and machine learning techniques. It
-            aims to combat fake reviews by providing users with trustworthy
-            feedback on products and services.
+            Developed and implemented interactive video features using 100ms API
+            for seamless real-time video conferencing and communication between
+            therapists and patients. Integrated React components to build
+            dynamic, responsive user interfaces, enhancing user experience and
+            engagement on the platform.
           </motion.div>
-          <a href="https://reviewreward.vercel.app" target="_blank">
-            <motion.div
-              initial={variants.initial}
-              whileInView={variants.screen}
-              transition={variants.transition}
-              viewport={{ once: true }}
-              className="z-10 font-poppins bg-[#FBC200] hover:bg-[#FFD957] transition-colors duration-300 text-black w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
-            >
-              Demo
-              <span className="ml-3">
-                <FaArrowRightLong color="#000" />
-              </span>
-            </motion.div>
-          </a>
         </div>
       </div>
       <div className="w-full flex my-20 flex-col lg:flex-row gap-20 xl:gap-0 items-center justify-center">
-        <div className="w-full xl:w-1/2 2xl:w-[900px] flex flex-col items-center gap-5 md:gap-10">
+        <div className="w-full xl:w-1/2 2xl:w-[900px] flex flex-col items-center gap-3 px-3">
           <motion.div
             initial={variants.initial}
             whileInView={variants.screen}
             transition={variants.transition}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-corir"
+            className="text-3xl md:text-4xl font-poppins text-center"
           >
-            Autoflow
+            ONEV
+          </motion.div>
+          <motion.div
+            initial={variants.initial}
+            whileInView={variants.screen}
+            transition={variants.transition}
+            viewport={{ once: true }}
+            className="text-xl text-gray-500 font-poppins text-center"
+          >
+            Software Developer Intern (2023 - 2024)
           </motion.div>
           <motion.div
             initial={variants.initial}
@@ -162,26 +166,13 @@ const HomeProducts = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-400 font-poppins w-[90%] text-center"
           >
-            Revolutionize Your Automotive Business with Cutting-Edge Auto SaaS
-            Solutions. Our platform offers comprehensive software as a service
-            designed specifically for the automotive industry.Seamlessly manage
-            inventory, streamline sales processes, and enhance customer
-            relationships with our intuitive tools.
+            Implemented an OTP architecture for secure and efficient driver
+            authentication during onboarding and login processes. Integrated
+            Razorpay payment gateway to facilitate daily payments for drivers.
+            Incorporated Firebase push notifications to keep drivers informed
+            about important updates, payment confirmations, and attendance
+            records.
           </motion.div>
-          <a href="https://autosaas.vercel.app" target="_blank">
-            <motion.div
-              initial={variants.initial}
-              whileInView={variants.screen}
-              transition={variants.transition}
-              viewport={{ once: true }}
-              className="z-10 font-poppins bg-[#00249C] hover:bg-[#0030CF] transition-colors duration-300 text-white w-[140px] h-[40px] rounded-lg flex items-center justify-center cursor-pointer text-sm"
-            >
-              Demo
-              <span className="ml-3">
-                <FaArrowRightLong />
-              </span>
-            </motion.div>
-          </a>
         </div>
         <div className="w-full xl:w-1/2 2xl:w-[900px] flex items-center justify-center h-full">
           <motion.div
@@ -192,7 +183,7 @@ const HomeProducts = () => {
             className="flex items-center justify-center relative"
           >
             <Image
-              src={"/images/auto.png"}
+              src={"/images/2.png"}
               className="w-[500px] md:w-[600px] xl:w-[800px] lg:h-[400px] xl:h-[500px] rounded-md shadow-sm object-cover object-left"
               width={100}
               height={100}
@@ -200,7 +191,7 @@ const HomeProducts = () => {
               alt="Image"
             />
 
-            <motion.div
+            {/* <motion.div
               initial={variants.initial}
               whileInView={variants.screen}
               transition={variants.transition}
@@ -229,7 +220,7 @@ const HomeProducts = () => {
                 unoptimized
                 alt="Image"
               />
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

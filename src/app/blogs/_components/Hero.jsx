@@ -43,7 +43,7 @@ const Hero = ({ blog }) => {
             transition={{ duration: 0.3, delay: 1, ease: [0.76, 0, 0.24, 1] }}
             className="text-5xl leading-tight tracking-tight text-center font-quick w-[80%]"
           >
-            Discover Our Latest Posts
+            Discover my Latest Posts
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -55,9 +55,9 @@ const Hero = ({ blog }) => {
             }}
             className="text-center w-1/2 font-poppins text-gray-400"
           >
-            Welcome to our blog, where we dive deep into the world of software
+            Welcome to my blog, where i dive deep into the world of software
             development. From the latest industry trends and best practices to
-            expert tips and innovative solutions, our posts are designed to keep
+            expert tips and innovative solutions, my posts are designed to keep
             you informed and inspired.
           </motion.div>
         </div>
@@ -99,7 +99,7 @@ const Hero = ({ blog }) => {
                 <div className="font-quickLight text-base">
                   Written By{" "}
                   <span className="font-quick">
-                    {blog.properties.Author.rich_text[0].plain_text}
+                    Suryansh
                   </span>
                 </div>
               </div>

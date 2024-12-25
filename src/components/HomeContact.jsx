@@ -152,13 +152,12 @@ const HomeContact = () => {
             <div className="flex flex-col gap-1">
               <div className="text-gray-300 font-poppins flex gap-3 text-sm">
                 Prefer email?{" "}
-                <span className="text-black">info@deqube.co.in</span>
+                <span className="text-black">suryansh.sharma9315@gmail.com</span>
               </div>
               <div className="text-gray-300 font-poppins flex gap-3 text-sm">
                 Prefer phone?{" "}
                 <span className="text-black">
-                  +91 8447223934
-                  <br /> +91 9625262980
+                  +91 9315566594
                 </span>
               </div>
             </div>
@@ -190,9 +189,6 @@ const HomeContact = () => {
               </div>
               <div className="w-[150px]">
                 <div className="font-quick text-base">Suryansh Sharma</div>
-                <div className="font-quick text-gray-400 text-sm">
-                  Co-founder
-                </div>
               </div>
               <div className="h-[40px] w-[40px] rounded-[20px] flex items-center justify-center bg-[#00249C]">
                 <FaCalendar color="#fff" size={14} />

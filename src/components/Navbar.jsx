@@ -41,16 +41,16 @@ const Navbar = () => {
 
   return (
     <div className="w-screen bg-white" id="home">
-      <div className=" px-10 py-6 flex items-center justify-between">
+      <div className="px-5 sm:px-10 py-6 flex items-center justify-between">
         <motion.div
           layoutId="loader_anim_1"
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <Image
-            src={{ src: "/logo_black.png", height: 63, width: 250 }}
+            src={{ src: "/images/logo.png", height: 63, width: 250 }}
             alt="logo"
             unoptimized
-            className="w-[150px] h-[38px] sm:w-[200px] sm:h-[50px] md:w-[250px] md:h-[63px] "
+            className="w-[250px] aspect-auto -translate-y-[5px] sm:-translate-y-[10px]"
           />
         </motion.div>
         <motion.div

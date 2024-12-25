@@ -73,7 +73,7 @@ const HomeBlogs = ({ blogs }) => {
                 <div className="font-quickLight text-base">
                   Written By{" "}
                   <span className="font-quick">
-                    {blog.properties.Author.rich_text[0].plain_text}
+                    Suryansh
                   </span>
                 </div>
               </div>

@@ -37,31 +37,29 @@ export const Links = [
 ];
 
 export const Socials = [
-  { name: "Linkedin", link: "/" },
-  { name: "Instagram", link: "/" },
-  { name: "Youtube", link: "/" },
-  { name: "Twitter", link: "/" },
-  { name: "Github", link: "/" },
+  { name: "Linkedin", link: "https://www.linkedin.com/in/suryansh-sharma-776563226/" },
+  { name: "Twitter", link: "https://x.com/Suryanshhsharma" },
+  { name: "Github", link: "https://github.com/suryansh9315" },
 ];
 
 export const Projects = [
-  {
-    name: "Fleet OPS",
-    image: "/images/2.png",
-    link: "https://play.google.com/store/apps/details?id=com.onev.fleetops&pli=1",
-    color: "#171810",
-  },
-  {
-    name: "Night Flinch Media",
-    image: "/images/3.png",
-    link: "/",
-    color: "#CE2380",
-  },
   {
     name: "All Swap",
     image: "/images/1.png",
     link: "https://all-swap-flax.vercel.app",
     color: "#07DAC0",
+  },
+  {
+    name: "Fuzzie",
+    image: "/images/auto_resize.png",
+    link: "https://autosaas.vercel.app/",
+    color: "#07DAC0",
+  },
+  {
+    name: "Night Flinch Media",
+    image: "/images/3.png",
+    link: "https://www.nightfinchmedia.in/",
+    color: "#CE2380",
   },
   {
     name: "3D Viewer",
@@ -170,46 +168,46 @@ export const Team = [
 export const FAQs = [
   {
     index: 0,
-    question: "What services does your software development agency offer?",
+    question: "What services do you offer?",
     answer:
-      "We provide a comprehensive range of services including Custom software development, Web application development, Mobile app development (iOS and Android), UI/UX design, Quality assurance and testing, Maintenance, Marketing, and SEO",
+      "I provide a comprehensive range of services including Custom software development, Web application development, Mobile app development (iOS and Android), UI/UX design, Quality assurance and testing, Maintenance, Marketing, and SEO",
   },
   {
     index: 1,
-    question: "How experienced is your team?",
+    question: "How experienced are you?",
     answer:
-      "Our team consists of highly skilled professionals with extensive experience in software development. We have successfully delivered projects across various industries, ensuring quality and efficiency.",
+      "I have been developing apps and websites for almost 3 years now. I have successfully delivered projects across various industries, ensuring quality and efficiency.",
   },
   {
     index: 2,
     question: "Can you handle both small and large-scale projects?",
     answer:
-      "Yes, we cater to projects of all sizes. Whether you need a simple web application or a complex enterprise-level solution, we have the expertise and resources to deliver.",
+      "Yes, i cater to projects of all sizes. Whether you need a simple web application or a complex enterprise-level solution, i have the expertise and resources to deliver.",
   },
   {
     index: 3,
     question: "How do you ensure the security of the software developed?",
     answer:
-      "Security is a top priority for us. We follow industry best practices for secure coding, conduct regular security assessments, and implement robust authentication and authorization measures to protect your software.",
+      "Security is a top priority for me. I follow industry best practices for secure coding, conduct regular security assessments, and implement robust authentication and authorization measures to protect your software.",
   },
   {
     index: 4,
     question: "What is your development process like?",
     answer:
-      "Our development process is agile-oriented, emphasizing collaboration, flexibility, and iterative development. We involve our clients throughout the process to ensure alignment with their goals and expectations.",
+      "My development process is agile-oriented, emphasizing collaboration, flexibility, and iterative development. I involve my clients throughout the process to ensure alignment with their goals and expectations.",
   },
   {
     index: 5,
     question:
       "What is your approach to handling changes or additional requirements during a project?",
     answer:
-      "We understand that requirements may evolve during the project lifecycle. We handle changes through a structured change management process that ensures transparency, assesses impacts on timelines and budgets, and keeps our clients informed every step of the way.",
+      "I understand that requirements may evolve during the project lifecycle. I handle changes through a structured change management process that ensures transparency, assesses impacts on timelines and budgets, and keeps our clients informed every step of the way.",
   },
   {
     index: 6,
     question: "How do you handle post-launch support and maintenance?",
     answer:
-      "We offer comprehensive post-launch support and maintenance services to ensure your software continues to perform optimally. This includes bug fixes, updates, security patches, and ongoing support based on agreed-upon service level agreements (SLAs).",
+      "I offer comprehensive post-launch support and maintenance services to ensure your software continues to perform optimally. This includes bug fixes, updates, security patches, and ongoing support based on agreed-upon service level agreements (SLAs).",
   },
 ];
 

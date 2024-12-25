@@ -48,7 +48,7 @@ const BlogHeader = ({
         >
           <div className="font-quickLight text-4xl sm:text-6xl">{title}</div>
           <div className="font-quickLight text-xl sm:text-2xl">
-            Written by <span className="font-quick">{author}</span> on{" "}
+            Written by <span className="font-quick">Suryansh</span> on{" "}
             <span className="font-quick">{date}</span>
           </div>
           <div className="font-sans text-base mr-0 md:mr-20">{description}</div>

@@ -37,7 +37,7 @@ const HomeReviews = () => {
           viewport={{ once: true }}
           className="text-3xl xs:text-4xl lg:text-5xl  leading-tight tracking-tight font-quick"
         >
-          What our clients say
+          What my clients say
         </motion.div>
       </div>
       <div className="my-10 flex flex-col items-center justify-center overflow-x-hidden w-screen">

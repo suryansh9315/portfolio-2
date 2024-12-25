@@ -16,8 +16,8 @@ const Home = async () => {
     <>
       <SmoothScroll />
       <HomeHero />
-      <HomeProjects />
       <HomeProducts />
+      <HomeProjects />
       <HomeServices />
       <HomeReviews />
       <HomeFAQs />

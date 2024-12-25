@@ -45,7 +45,7 @@ const HomeServices = () => {
           viewport={{ once: true }}
           className="text-3xl xs:text-4xl lg:text-5xl  leading-tight tracking-tight font-quick"
         >
-          What we offer
+          What I offer
         </motion.div>
       </div>
       <div className="flex my-6 sm:my-14 items-center h-full flex-col lg:flex-row gap-10 sm:gap-20 lg:gap-0">
